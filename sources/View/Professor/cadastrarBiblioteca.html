@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8"/>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../app/styles/bootstrap.css" rel="stylesheet">
+    <link href="../../app/styles/style.css" rel="stylesheet">
+    <script type="text/javascript" src="../../app/scritps/LIB/jquery-1.11.0.js "></script>
+    <script type="text/javascript" src="../../app/scritps/LIB/bootstrap.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row header">
+			<div class="col-md-12"></div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<ul class="nav nav-pills nav-stacked menu font-24-bold">
+					<li><a href="cadastrarTreino.html">Cadastrar Treino</a></li>
+					<li><a href="#">Alterar Treino</a></li>
+					<li><a href="cadastrarBiblioteca.html">Cadastrar Biblioteca</a></li>
+					<li><a href="#">Alterar Biblioteca</a></li>
+					<li><a href="alterarSenha.html">Alterar Senha</a></li>
+					<li><a href="#">Sair</a></li>
+				</ul>
+			</div>
+			<div class="col-md-8">
+				<div class="panel content">
+				<STRONG> CADASTRAR BIBLIOTECA </STRONG>
+				<hr/>
+					<form id="FormCadBiblioteca" name="FormCadBiblioteca" method="post">
+					  <p>
+					    <label for="carga">Nome do Aparelho/Exercicio:</label>
+					    <input class="form-control exercicio" type="text" />					
+					  </p>
+					  <p>
+					    <label for="serie">Grupo Muscular:</label>
+					    <input class="form-control grupoMusc" type="text" />
+					  </p>
+					  <br>
+					  	<button type="button" class="btn btn-success"> Salvar </button> 
+					  	&nbsp &nbsp
+					  	<button type="button" class="btn btn-warning"> Limpar </button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
