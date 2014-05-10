@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8"/>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../app/styles/bootstrap.css" rel="stylesheet">
+    <link href="../../app/styles/style.css" rel="stylesheet">
+    <script type="text/javascript" src="../../app/scritps/LIB/jquery-1.11.0.js "></script>
+    <script type="text/javascript" src="../../app/scritps/LIB/bootstrap.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row header">
+			<div class="col-md-12"></div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<ul class="nav nav-pills nav-stacked menu font-24-bold">
+					<li><a href="cadastrarAluno.html">Cadastrar Aluno</a></li>
+					<li><a href="../TESTE/teste.html">Listar Alunos</a></li>
+					<li><a href="alterarAluno.html">Alterar Aluno</a></li>
+					<li><a href="alterarSenha.html">Alterar sua senha</a></li>
+					<li><a href="#">Sair</a></li>
+				</ul>
+			</div>
+			<div class="col-md-8">
+				<div class="panel content">
+				<STRONG> CADASTRAR ALUNO </STRONG>
+				<hr/>
+					<form id="FormCadAluno" name="FormCadAluno" method="post">
+			          <p>
+					    <label for="nome">Nome Completo:</label>
+					    <input class="form-control bigInblock" type="text" />
+					  </p>
+					  <p>
+					    <label for="cpf">CPF:</label>
+					    <input class="form-control cpf" type="text" />
+
+					    <label for="sexo">Sexo:</label>
+					    <select class="form-control sexoInblock" name="sexo" id="sexo">
+					      <option>Femino</option>
+					      <option>Masculino</option>
+					    </select>
+					  </p>
+					  <p>
+					  	<label for="data">Data Nascimento:</label>
+					    <input class="form-control dtNasc" type="date" />
+					  </p>
+					  <p>
+					    <label for="email">Email:</label>
+					    <input class="form-control email" type="text" />
+					  </p>
+					  <p>
+					    <label for="tel">Telefone Fixo:</label>
+					    <input class="form-control telFixo" type="text" />
+					  </p>
+					  <p>
+					  	<label for="cel"> Telefone Celular:</label>
+					    <input class="form-control telCel" type="text" />
+					  </p>
+					  <br>
+					  	<button type="button" class="btn btn-success"> Salvar </button> 
+					  	&nbsp &nbsp
+					  	<button type="button" class="btn btn-warning"> Limpar </button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
