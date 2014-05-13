@@ -13,6 +13,7 @@
 	<script>
 		$(document).ready( function () {
 			$('#FormCadProf').submit( function() {
+				document.getElementById('msg').hide();
 				var that = this,
 					dados = $(this).serialize();
 					
@@ -23,6 +24,7 @@
 					success : function (responseText) {
 						//alert(responseText);
 						//document.getElementById('msg').style.color="red";
+						document.getElementById('msg').show();
 						document.getElementById('msg').innerHTML = responseText;
 					}
 				});
@@ -97,6 +99,9 @@
 
 					  </p>
 					  <br>
+					  <div id="msg">
+					  	
+					  </div>	
 					  <div>
 
 					    <button type="submit" class="btn btn-success" name="btnSalvar"> <i class="fa fa-check-circle"></i> </button> 
