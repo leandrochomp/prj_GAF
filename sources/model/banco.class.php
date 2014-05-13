@@ -66,7 +66,15 @@ abstract class banco{
 		}//end for
 		//apagar depois esse echo
 		//echo $sql;
-		return $this->executaSQL($sql);
+		//return $this->executaSQL($sql);
+		
+		try {
+		  $this->executaSQL($sql);
+		  return "<p> CADASTRADO </p>";
+		} catch (Exception $e) {
+		    return "ERRO NÃO TRATADO";
+		}		
+		
 	}//end class Inserir
 	
 	
