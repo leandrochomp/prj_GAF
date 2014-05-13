@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../../app/styles/bootstrap.css" rel="stylesheet">
     <link href="../../app/styles/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../app/styles/font-awesome.min.css">
     <script type="text/javascript" src="../../app/scritps/LIB/jquery-1.11.0.js "></script>
     <script type="text/javascript" src="../../app/scritps/LIB/bootstrap.js"></script>
 </head>
@@ -28,21 +29,17 @@
 			</div>
 			<div class="col-md-8">
 				<div class="panel content">
-				<STRONG> ALTERAR SENHA </STRONG>
+				<STRONG> CADASTRAR CATEGORIA </STRONG>
 				<hr/>
-					<form id="FormUser" name="FormUser" method="post">
+					<form id="FormCadCategoria" name="FormCadCategoria" method="post">
 					  <p>
-					    <label for="senhaatual">Senha Atual:</label>
-					    <input class="form-control pass" type="password" />
-					  </p>
-					  <p>
-					    <label for="novasenha">Nova Senha:</label>
-					    <input class="form-control pass" type="password"/>
-					  </p>
-					  <p>
-					    <label for="confirmarsenha">Confirmar Senha:</label>
-					    <input class="form-control newpass" type="password"/>
-					  </p>
+					    <label for="serie">Grupo Muscular:</label>
+					    <input class="form-control grupoMusc" type="text" />
+					  
+					  	<button type="button" class="btn btn-success"> <i class="fa fa-check-circle"></i> </button> 
+					  	&nbsp
+					  	<button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i> </button>
+					  	</p>
 					</form>
 				</div>
 			</div>
