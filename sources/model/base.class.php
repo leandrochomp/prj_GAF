@@ -49,9 +49,9 @@ abstract class base extends banco {
 	function VerificaCPF($CPF){
     	$sltCPF = mysql_query("select CPF from pessoa where cpf = '$CPF'; ");
     		if (mysql_num_rows($sltCPF)>0) {
-    			//echo 'CPF já cadastrado';
-                //echo '<p>CPF já cadastrado</p>';
-                echo "<p><font color='red' style='font-size:15px;'>CPF já cadastrado</font></p>";
+    			//echo 'CPF jï¿½ cadastrado';
+                //echo '<p>CPF jï¿½ cadastrado</p>';
+                echo "<p><font color='red' style='font-size:15px;'>CPF j&aacute; cadastrado</font></p>";
     			return true;
     		}
     		return false;
@@ -60,9 +60,9 @@ abstract class base extends banco {
     	function VerificaEmail($email){
      		$sltEmail = mysql_query("select email from pessoa where email = '$email'; ");
     		if (mysql_num_rows($sltEmail)>0) {
-    			//echo '<p>Email já cadastrado</p>';
-                echo "<p><font color='red' style='font-size:15px;'>Email já cadastrado</font></p>";
-    			//$msg = '<p>Email já cadastrado</p>';
+    			//echo '<p>Email jï¿½ cadastrado</p>';
+                echo "<p><font color='red' style='font-size:15px;'>Email jï¿½ cadastrado</font></p>";
+    			//$msg = '<p>Email jï¿½ cadastrado</p>';
     			return true;
     		}else{
     			$msg = '';

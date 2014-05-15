@@ -2,10 +2,10 @@
 require_once '../model/categoria.class.php';
         	
       $treino = new treino(array(
-       'idAtividade' => $_POST['sltAtividade'],
-	   'idCategoriaAluno' => $_POST['sltCatAluno'],
-	   //session
-	   'idProfessor' => $_POST[''],
+           
+	   'idProfessor' => $_POST['sltProfessor'],
+           'idCategoria' => $_POST['sltCategoria'], 
+           'idAtividade' => $_POST['sltAtividade'],
 	   'nome'     	 => $_POST['txtNmTreino'],
 	   'serie'       => $_POST['txtSerie'],
 	   'carga'       => $_POST['txtCarga'],

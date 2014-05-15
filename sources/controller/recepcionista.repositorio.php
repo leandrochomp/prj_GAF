@@ -27,8 +27,14 @@ $hoje = date("Y/m/d");
 			'idPessoa'     	=> $codigo,
         ));
 		
-  $testando->Inserir($testando);
-  $recepcionista->Inserir($recepcionista);
+  
+  //$recepcionista->Inserir($recepcionista);
+  
+  if(($recepcionista->Inserir($recepcionista)) && ($testando->Inserir($testando))){
+      echo "Cadastrou";
+  } else {
+      echo "Não cadastrou";
+  }
   
  //$professor::MostraAluno();
 //$aluno = new Aluno();

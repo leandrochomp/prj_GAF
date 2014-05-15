@@ -1,7 +1,8 @@
 <?php 
 	//carregando o combo
-	require_once '../../model/atividade.class.php'; 
+    require_once '../../model/atividade.class.php'; 
     $atividade = new atividade();
+
     $atividade->conecta();
  ?>
 
@@ -40,13 +41,15 @@
 				<hr/>
 					<form id="FormCadTreino" name="FormCadTreino" method="post">
 					  <p>
+					    <label for="serie">Nome Treino:</label>
+					    <input class="form-control bigInblock" type="text" />
+                                          <p>
 					    <label for="nome">Escolha a Atividade:</label>
 						<select class="form-control atividade2" name="sltAtividade" id="sltAtividade">
-                      	<?php
-                        	atividade::MostraAtividades();
-                        ?>
-                      </select>
-
+                                                    <?php
+                                                            atividade::MostraAtividades();
+                                                    ?>
+                                                </select>
 					  </p>
 					  <p>
 					    <label for="serie">Série:</label>
@@ -57,7 +60,7 @@
 					  </p>
 					  <p>
 					    <label for="repeticao">Repetição:</label>
-					    <input class="form-control repeticao" type="text" />
+					    <input class="form-control repeticao" type="text" id="txtRep"/>
 					    
 					    <label for="tempo">Tempo:</label>
 					    <input class="form-control tempo" type="text" />

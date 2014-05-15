@@ -25,6 +25,16 @@
 			}
 			$this->campoPk = "idPessoa";
 		}// end construc		
-		
-	}//end class Pessoa
+                
+                public function validaLogin($login, $senha){                   
+                    $consulta = mysql_query("SELECT * FROM pessoa order by idPESSOA");
+                                                            
+                    while ($pessoa = mysql_fetch_array($consulta)){                        
+                        if (($pessoa['login'] == $login) && ($pessoa['senha'] == $senha)){
+                            return $pessoa['idPERFIL'];
+                        }
+                    }                    
+                    return NULL;
+                }
+        }//end class Pessoa
 ?>

@@ -18,18 +18,41 @@
 		</div>
 		<div class="row">
 			<div class="col-md-12 formulario">
-				<form role="form">
+				<form role="form" id="FormLogin" method="post" action="../controller/login.repositorio.php">
 				  <div class="form-group">
-				    <input type="text" class="form-control icon-login" id="exampleInputEmail1" placeholder="Usuario">
+				    <input type="text" class="form-control icon-login" id="txtLoginTela" name="txtLoginTela" placeholder="Usuario">
 				  </div>
 				  <div class="form-group">
-				    <input type="password" class="form-control icon-password" id="exampleInputPassword1" placeholder="Senha">
+				    <input type="password" class="form-control icon-password" id="txtSenhaTela" name="txtSenhaTela" placeholder="Senha">
 				  </div>
+                                  <span id="msg"> </span>
 				  <button type="submit" class="btn btn-default">Entrar</button>
 				  <a href="#">Esqueceu a senha?</a>
 				</form>
 			</div>
 		</div>
 	</div>
+    
+        <script>
+		$(document).ready( function () {
+			$('#FormLogin').submit( function() {
+				var that = this,
+				dados = $(this).serialize();
+
+				$.ajax({
+					url : $(that).attr('action'),
+					type : 'POST',
+					data : dados,
+					success : function (responseText) {
+						//alert(responseText);
+						document.getElementById('msg').style.color="red";
+						document.getElementById('msg').innerHTML = responseText;
+					}
+				});
+
+				return false;
+			});
+		});
+	</script>
 </body>
 </html>
