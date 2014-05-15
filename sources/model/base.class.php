@@ -74,10 +74,6 @@ abstract class base extends banco {
     	public static function MostraCategoria(){
 			$sql = "select * from categoria_aluno";
 		}//end function MostraCategoria
-		
-		
 
-		
-		
 }//end class
 ?>

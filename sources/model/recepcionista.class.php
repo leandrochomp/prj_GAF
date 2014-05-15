@@ -14,6 +14,7 @@
 			}
 			$this->campoPk = "idRecepcionista";
 
-		}// end construc
+		}// end construct
+		//não deu certo colocar o mostrar aluno aqui
 	}//end class Pessoa
 ?>

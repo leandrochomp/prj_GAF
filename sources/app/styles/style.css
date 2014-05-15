@@ -225,7 +225,7 @@ CADASTROS
 	display: inline-block;
 	width: 14%;
 	padding: 5px 20px;
-	margin-left: 17.5%;
+	margin-left: 20%;
 	margin-right: 11%;
 }
 
@@ -240,8 +240,8 @@ CADASTROS
 	display: inline-block;
 	width: 14%;
 	padding: 5px 20px;
-	margin-left: 11.3%;
-	margin-right: 11%;
+	margin-left: 14%;
+	margin-right: 10.8%;
 }
 
 .tempo{
@@ -278,6 +278,13 @@ CADASTROS
 	padding: 5px 20px;
 	margin-left: 5%;
 	margin-right: 2%;
+}
+
+.atividade2 {
+	display: inline-block;
+	width: 27%;
+	/*padding: 5px 20px;*/
+	margin-left: 2%;
 }
 }
 

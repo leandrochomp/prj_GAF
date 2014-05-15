@@ -6,33 +6,6 @@
     <link href="../../app/styles/bootstrap.css" rel="stylesheet">
     <link href="../../app/styles/style.css" rel="stylesheet">
     <link rel="stylesheet" href="../../app/styles/font-awesome.min.css">
-
-    <script type="text/javascript" src="../../app/scritps/LIB/jquery-1.11.0.js "></script>
-    <script type="text/javascript" src="../../app/scritps/LIB/bootstrap.js"></script>
-
-	<script>
-		$(document).ready( function () {
-			$('#FormCadProf').submit( function() {
-				document.getElementById('msg').hide();
-				var that = this,
-					dados = $(this).serialize();
-					
-				$.ajax({
-					url : $(that).attr('action'),
-					type : 'POST',
-					data : dados,
-					success : function (responseText) {
-						//alert(responseText);
-						//document.getElementById('msg').style.color="red";
-						document.getElementById('msg').show();
-						document.getElementById('msg').innerHTML = responseText;
-					}
-				});
-				
-				return false;
-			});
-});
-	</script>
 </head>
 
 <body>
@@ -95,15 +68,11 @@
 					  <hr>
 					  <p> 
 					  	<label for="cel"> Login:</label>
-					    <input class="form-control login" type="text" name="txtLogin" id="txtLogin" required='required'/>
-
+					    <input class="form-control login" type="text" name="txtLogin" id="txtLogin" title="Digite o login" required='required'/>
 					  </p>
+					  <span id="msg"></span>
 					  <br>
-					  <div id="msg">
-					  	
-					  </div>	
 					  <div>
-
 					    <button type="submit" class="btn btn-success" name="btnSalvar"> <i class="fa fa-check-circle"></i> </button> 
 					  	&nbsp &nbsp
 					  	<button type="button" class="btn btn-danger" name="btnCancel"><i class="fa fa-trash-o"></i> </button>
@@ -114,5 +83,28 @@
 			</div>
 		</div>
 	</div>
+	<script type="text/javascript" src="../../app/scritps/LIB/jquery-1.11.0.js "></script>
+    <script type="text/javascript" src="../../app/scritps/LIB/bootstrap.js"></script>
+    <script>
+		$(document).ready( function () {
+			$('#FormCadProf').submit( function() {
+				var that = this,
+				dados = $(this).serialize();
+
+				$.ajax({
+					url : $(that).attr('action'),
+					type : 'POST',
+					data : dados,
+					success : function (responseText) {
+						//alert(responseText);
+						document.getElementById('msg').style.color="red";
+						document.getElementById('msg').innerHTML = responseText;
+					}
+				});
+
+				return false;
+			});
+		});
+	</script>
 </body>
 </html>

@@ -32,16 +32,11 @@
                 $cmd = mysql_query($sql);
                 if (mysql_num_rows($cmd) > 0){
                 	while ($row = mysql_fetch_array($cmd)){
-                    	echo '<option value='.$row[0].'>'.$row[1].'</option>'      ;
+                    	echo '<option value='.$row[0].'>'.$row[1].'</option>';
                     }
                 }
               }
 
-              public static function getByID(clienteCPF){
-              	$sql = "select * from cliente 
-              			where $_POST['txtNome'] == clienteCPF" 
-              			$cmd = mysql_query($sql);
-              }
-                
+              
 	}//end class Pessoa
 ?>

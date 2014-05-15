@@ -2,11 +2,10 @@
 require_once '../model/professor.class.php';
 $hoje = date("Y/m/d");  
 
-
 // arrumar sexo!!!!!
 // FAZER UPLOAD DE IMAGEM!!!!!
  $testando = new pessoa(array(
-			'idPerfil' 		=> '3',
+			'idPerfil' 		=> '2',
 			'nome'     		=> $_POST['txtNome'],
 			'CPF'      		=> $_POST['txtCPF'],
 			'email'	   	    => $_POST['txtEmail'],
