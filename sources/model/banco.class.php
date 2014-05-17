@@ -158,77 +158,6 @@ abstract class banco{
     //Depois essa parte do código será transferida para a classe recepcionista!
 
     //Não deu certo ... Fatal error: Class 'aluno' not found in C:\xampp\htdocs\GAF\View\Recepcionista\teste.php on line 5
-    public static function MostraAluno(){
-		//echo 'chamou metodos para ' . $objeto->tabela;
-		//$todos       = "select * from Pessoa inner join aluno on Pessoa.idPessoa = aluno.idPessoa where pessoa.status = 1 order by pessoa.nome;";
-		$todos = '
-					select * 
-					from Pessoa 
-					inner join aluno 
-					inner join categoria_aluno 
-					on Pessoa.idPessoa = aluno.idPessoa 
-					where pessoa.status = 1 and aluno.idCategoria = categoria_aluno.idCategoria
-					order by pessoa.nome;
-				';
-        $query       = mysql_query($todos);        	
-        	if($query > 0){
-        		 echo '<meta charset="utf8">';
-        		 echo '<table class="GAF-tabelas" border="1">';
-        		 echo '<thead>
-			             <tr>
-				                <th>Nome do Aluno</th>
-				                <th>Matricula</th>
-				                <th>Telefone</th>
-				                <th>Sexo</th>
-				                <th>Peso</th>
-				                <th>Altura</th>
-				                <th>Peito</th>
-				                <th>Cintura</th>
-				                <th>Quadril</th>
-				                <th>Braço</th>
-				                <th>Coxa</th>
-								<th>Categoria</th>
-				                <th>Data Cadastro</th>
-								<th colspan ="2">Ações</th>
-				                <th></th>
-			                </tr>
-						</thead>							
-						<tbody>
-		                 <tr>';
-           		while($info_pessoa = mysql_fetch_array($query)){
-                	echo"<td>$info_pessoa[2]</td>";    
-                    echo "<td>$info_pessoa[24]</td>";
-                    // echo "<td>$info_pessoa[5]</td>";
-                    
-                    $info_pessoa[7] == 'M' ? $sexo  =  "Masculino" : $sexo = "Feminino";
-					
-                    echo "<td>$sexo</td>";
-                    
-                    // echo "<td>$info_pessoa[17]</td>";
-                    // echo "<td>$info_pessoa[18]</td>";
-                    // echo "<td>$info_pessoa[19]</td>";
-                    // echo "<td>$info_pessoa[20]</td>";
-                    // echo "<td>$info_pessoa[21]</td>";
-                    // echo "<td>$info_pessoa[22]</td>";
-                    // echo "<td>$info_pessoa[23]</td>";
-                    // echo "<td>$info_pessoa[26]</td>";
-                    
-                    // echo "<td>$info_pessoa[9]</td>";
-                    //echo "<td>";
-                    //echo "<td>";
-                    //echo "<a href='cadastrarTreino.php?idAluno='".$info_aluno[4]."class='btn btn-small' title='Cadastrar Treinos'><i class='icon-pencil'></i></a>";
-                    echo '<td><a href="desativar.aluno.php?cod='.$info_pessoa[0].'">Desativar</a></td>';
-                    echo '<td><a href="editar.php?cod='.$info_pessoa[0].'">Editar</a></td>';
-                    // echo '<td><a href="relatorio.php?cod='.$info_pessoa[0].'">Relatorios </a></p></td></tr>';
-                    echo '<td><a href="linux.php?cod='.$info_pessoa[0].'">lnix </a></p></td></tr>';
-				}
-			echo '</table>';
-		}else{
-			
-			echo '<p>Nenhum registro encontrado</p>';
-		}
-    
-    }//end function MostraAluno
         	
     public static function PreencheTextAluno($codigo){
 			$sql = 'select * 
@@ -266,4 +195,79 @@ abstract class banco{
 		}// end function PreencheText
     
 
+		 public static function MostraAluno(){
+		//echo 'chamou metodos para ' . $objeto->tabela;
+		//$todos       = "select * from Pessoa inner join aluno on Pessoa.idPessoa = aluno.idPessoa where pessoa.status = 1 order by pessoa.nome;";
+		$todos = '
+					select * 
+					from Pessoa 
+					inner join aluno 
+					inner join categoria_aluno 
+					on Pessoa.idPessoa = aluno.idPessoa 
+					where pessoa.status = 1 and aluno.idCategoria = categoria_aluno.idCategoria
+					order by pessoa.nome;
+				';
+        $query       = mysql_query($todos);        	
+        	if($query > 0){
+        		 echo '<meta charset="utf8">';
+        		 echo '<table class="table">
+						<thead>
+							<tr>
+								<th>Nome</th>
+								<th>Matricula</th>
+								<th>Telefone</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>';
+						while($info_pessoa = mysql_fetch_array($query)){
+
+							echo '<tr>
+								<td>'.$info_pessoa[2].'</td>
+								<td>'.$info_pessoa[24].'</td>
+								<td>'.$info_pessoa[5].'</td>
+								<td class="buttons">
+									<div class="button">
+										<a href="EditarAluno.php?cod='.$info_pessoa[0].'"class="glyphicon glyphicon-align-justify"></a>
+										<a href="desativar.php?cod='.$info_pessoa[0].'" class="glyphicon glyphicon-remove"></a>
+										<a href="relatorio.php?cod='.$info_pessoa[0].'" class="glyphicon glyphicon-trash"></a>	
+									</div>
+								</td>				
+							</tr>
+						</tbody>';
+
+				echo '<ul class="list">
+				<li class="list-item">
+					<span class="list-description">Nome</span>
+					<span class="list-name">'.$info_pessoa[2].'</span>
+				</li>
+				<li class="list-item">
+					<span class="list-description">Matricula</span>	
+					<span class="list-name">'.$info_pessoa[24].'</span>
+				</li>
+				<li class="list-item">
+					<span class="list-description">Telefone</span>	
+					<span class="list-name">'.$info_pessoa[5].'</span>
+				</li>
+				<li>
+					<div class="button">
+						<a href="cadastrarTreino.php?cod='.$info_pessoa[0].'" class="glyphicon glyphicon-align-justify"></a>
+						<a href="desativar.php?cod='.$info_pessoa[0].'" class="glyphicon glyphicon-remove"></a>
+						<a href="relatorio.php?cod='.$info_pessoa[0].'" class="glyphicon glyphicon-trash"></a>						
+					</div>
+				</li>
+			</ul>';
+			
+			
+		}
+		echo '</table>';
+		
+		}else{
+			
+			echo '<p>Nenhum registro encontrado</p>';
+		}
+    
+    }//end function MostraAluno
+
 }//end class
+?>

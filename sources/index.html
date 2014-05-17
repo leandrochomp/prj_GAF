@@ -38,15 +38,44 @@
 			$('#FormLogin').submit( function() {
 				var that = this,
 				dados = $(this).serialize();
-
-				$.ajax({
+/** forma antiga
+				// $.ajax({
+				// 	url : $(that).attr('action'),
+				// 	type : 'POST',
+				// 	data : dados,
+				// 	success : function (responseText) {
+				// 		//alert(responseText);
+				// 		document.getElementById('msg').style.color="red";
+				// 		document.getElementById('msg').innerHTML = responseText;
+				// 	}
+				// });
+*/
+			$.ajax({
 					url : $(that).attr('action'),
 					type : 'POST',
 					data : dados,
 					success : function (responseText) {
+						if (responseText == 'ADM') {
+							console.log(responseText);
+							window.location = 'View/ADM/adm_index.html';
+						}
+						if (responseText== 'professor') {
+							window.location = 'View/Professor/professor_index.html';
+						}
+						if (responseText== 'recepcionista') {
+							window.location = 'View/Recepcionista/recepcionista_index.html';
+						}
+						if (responseText== 'aluno') {
+							window.location = 'View/Aluno/aluno_index.html';
+							window.location = 'View';
+						}
+						 else {
+						 	document.getElementById('msg').style.color="red";
+							document.getElementById('msg').innerHTML = responseText;
+						}
+
 						//alert(responseText);
-						document.getElementById('msg').style.color="red";
-						document.getElementById('msg').innerHTML = responseText;
+						
 					}
 				});
 

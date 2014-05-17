@@ -27,16 +27,18 @@ $hoje = date("Y/m/d");
   if($result != NULL){
       switch ($result){
           case 1:
-              echo "perfil 1";
+              echo  'ADM';
               break;
           case 2:
-              echo "perfil 2";
+          echo  'professor';
+          exit;
               break;
           case 3:
-              echo "perfil 3";
+          echo  'recepcionista';
+          exit;
               break;          
           case 4:
-              echo "perfil 4";
+              echo  'aluno';
               break;          
       }
   } else {
