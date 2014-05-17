@@ -26,7 +26,7 @@
 			$this->campoPk = "idPessoa";
 		}// end construc		
                 
-                public function validaLogin($login, $senha){                   
+                public static function validaLogin($login, $senha){                   
                     $consulta = mysql_query("SELECT * FROM pessoa order by idPESSOA");
                                                             
                     while ($pessoa = mysql_fetch_array($consulta)){                        
