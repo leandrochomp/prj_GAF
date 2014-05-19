@@ -1,11 +1,3 @@
-<!--
-<script type="text/javascript">
-
-function volta(){
-	setTimeout("window.location='../verAlunos.php'", 4000);
-}
-</script>
--->
 <?php
 require_once 'base.class.php';
 class treino extends base {
@@ -16,13 +8,8 @@ class treino extends base {
 				$this->campos_valores = array(
 				"idTreino"          => NULL,
 				"idAtividade"       => NULL,
-				"idCategoriaAluno" => NULL,
 				"idProfessor"       => NULL,
-				"nome"     	        => NULL,
-				"serie"             => NULL,
-				"carga"             => NULL,
-				"repeticao"         => NULL,
-				"tempo"             => NULL,			
+				"nome"     	        => NULL,			
 				);
 			} else {
 				$this->campos_valores = $campos;

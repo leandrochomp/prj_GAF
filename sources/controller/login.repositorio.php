@@ -1,28 +1,13 @@
 <?php
+//o verificaLogin esta em pessoa.class, por isso a necessidade de incluir ele 
 require_once '../model/pessoa.class.php';
-$hoje = date("Y/m/d");  
-
-
-// arrumar sexo!!!!!
-// FAZER UPLOAD DE IMAGEM!!!!!
+//pegando o login e senha da classe pessoa para identificar quem é o usuario que quer logar
  $testando = new pessoa(array(
-                        "idPerfil"     => NULL,
-                        "nome"         => NULL,
-                        "CPF"          => NULL,
-                        "email"        => NULL,
-                        "telefone"     => NULL,
-                        "celular"      => NULL,
-                        "sexo"         => NULL,
-                        "status"       => NULL,
-                        "dtNascimento" => NULL,
                         'login' => $_POST['txtLoginTela'],
-			'senha' => $_POST['txtSenhaTela'],
-                        "dtCadastro"   => NULL			
+			                  'senha' => $_POST['txtSenhaTela'],	
         ));
         
-		
-  
-  //$recepcionista->Inserir($recepcionista);  
+ //pega os dados da view e confere se existe no banco, e qual o seu perfil
  $result = $testando->validaLogin($_POST['txtLoginTela'], $_POST['txtSenhaTela']);
   if($result != NULL){
       switch ($result){
@@ -44,12 +29,5 @@ $hoje = date("Y/m/d");
   } else {
       echo "Login ou senha incorreta, tente novamente.";
   }
-  
- //$professor::MostraAluno();
-//$aluno = new Aluno();
-//$testando->valorPk = $testando->getCod();
-//$testando->Desativar($testando);
-//$testando->AtivarUsuario($testando);
-//$testando->MostraUsuario($testando);
 
 ?>

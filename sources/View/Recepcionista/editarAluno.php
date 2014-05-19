@@ -5,12 +5,10 @@
 	$pessoa = new pessoa();
 	$pessoa->conecta();
 	pessoa::PreencheTextAluno($codigo);
-
 ?>
 <body>
 
 	<meta charset="UTF-8">
-
 
 <h1> CADASTRO DE ALUNO </h1>
       <div class="modal-body">

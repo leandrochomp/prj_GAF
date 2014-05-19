@@ -16,11 +16,10 @@
 		<div class="row">
 			<div class="col-md-4">
 				<ul class="nav nav-pills nav-stacked menu font-24-bold">
-					<li><a href="cadastrarTreino.php">Cadastrar Treino</a></li>
-					<li><a href="#">Alterar Treino</a></li>
 					<li><a href="cadastrarCategoria.html">Cadastrar Categoria</a></li>
 					<li><a href="cadastrarAtividade.php">Cadastrar Atividade</a></li>
-					<li><a href="#">Alterar Biblioteca</a></li>
+					<li><a href="cadastrarTreino.php">Cadastrar Treino</a></li>
+					<li><a href="listarAluno.php">Listar Alunos</a></li>
 					<li><a href="alterarSenha.html">Alterar Senha</a></li>
 					<li><a href="#">Sair</a></li>
 				</ul>
@@ -34,10 +33,11 @@
 					    <label for="serie">Grupo Muscular:</label>
 					    <input class="form-control grupoMusc" type="text" name="txtGrupo" id="txtGrupo" />
 					  
-					  	<button type="submit" class="btn btn-success"> <i class="fa fa-check-circle"></i> </button> 
+					  	<button type="submit" class="btn btn-success" name="btnSalvar" id="btnSalvar"> <i class="fa fa-check-circle"></i> </button> 
 					  	&nbsp
-					  	<button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i> </button>
+					  	<button type="button" class="btn btn-danger" name="btnCancelar" id="btnCancelar"><i class="fa fa-trash-o"></i> </button>
 					  	</p>
+					  	<span id="msg"> </span>
 					</form>
 				</div>
 			</div>
@@ -45,5 +45,6 @@
 	</div>
     <script type="text/javascript" src="../../app/scritps/LIB/jquery-1.11.0.js "></script>
     <script type="text/javascript" src="../../app/scritps/LIB/bootstrap.js"></script>
+    <script src="../../app/scritps/js/Professor/categoria.js"> </script>
 </body>
 </html>

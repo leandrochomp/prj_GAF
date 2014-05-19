@@ -3,8 +3,15 @@ require_once '../model/atividade.class.php';
         	
       $atividade = new atividade(array(
        'idCategoria' => $_POST['sltGrupo'],
-       'nome'        => $_POST['txtAtividade']
+       'nome'        => $_POST['txtAtividade'],
+       'serie'       => $_POST['txtSerie'],
+       'carga'       => $_POST['txtCarga'],
+       'repeticao'   => $_POST['txtRep'],
+       'tempo'       => $_POST['txtTempo'],
       ));
 		
-  $atividade->Inserir($atividade);
+    if(($atividade->Inserir($atividade)))
+  	echo "Cadastrou";
+	  else 
+  	echo "Não cadastrou";
   ?>

@@ -9,7 +9,11 @@
 				$this->campos_valores = array(
 				"idAtividade"  => NULL,
 				"idCategoria"  => NULL,
-				"nome"         => NULL
+				"nome"         => NULL,
+				"serie"        => NULL,
+				"carga"        => NULL,
+				"repeticao"    => NULL,
+				"tempo"        => NULL,
 				);
 			}else{
 				$this->campos_valores = $campos;

@@ -267,8 +267,8 @@ CADASTROS
 .grupoMusc {
 	display: inline-block;
 	width: 27%;
-	padding: 5px 20px;
-	margin-left: 8.5%;
+	/*padding: 5px 20px;*/
+	margin-left: 6.5%;
 	margin-right: 2%;
 }
 
@@ -276,7 +276,7 @@ CADASTROS
 	display: inline-block;
 	width: 27%;
 	padding: 5px 20px;
-	margin-left: 5%;
+	margin-left: 3%;
 	margin-right: 2%;
 }
 

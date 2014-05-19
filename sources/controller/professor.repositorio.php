@@ -27,10 +27,12 @@ $hoje = date("Y/m/d");
 			'idPessoa'     	=> $codigo,
 			'nivel'  		=> $_POST['sltNivel']
         ));
-		
-  //var_dump($_POST['cbkNivel']);
-  $testando->Inserir($testando);
-  $professor->Inserir($professor);
+
+    if(($professor->Inserir($professor)) && ($testando->Inserir($testando)))
+      echo "Cadastrou";
+  	else 
+      echo "Não cadastrou";
+  	
   
  //$professor::MostraAluno();
 //$aluno = new Aluno();
