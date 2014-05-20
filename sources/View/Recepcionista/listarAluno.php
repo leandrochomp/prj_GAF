@@ -5,8 +5,6 @@
     <link href="../../app/styles/bootstrap.css" rel="stylesheet">
     <link href="../../app/styles/style.css" rel="stylesheet">
     <link href="../../app/styles/table.css" rel="stylesheet">
-    <script type="text/javascript" src="../../app/scritps/LIB/jquery-1.11.0.js "></script>
-    <script type="text/javascript" src="../../app/scritps/LIB/bootstrap.js"></script>
 </head>
 	<div class="container">
 		<div class="row header">
@@ -17,8 +15,7 @@
 				<ul class="nav nav-pills nav-stacked menu font-24-bold">
 					<li><a href="cadastrarAluno.html">Cadastrar Aluno</a></li>
 					<li><a href="listarAluno.php">Listar Alunos</a></li>
-					<li><a href="alterarAluno.html">Alterar Aluno</a></li>
-					<li><a href="alterarSenha.html">Alterar sua senha</a></li>
+					<li><a href="alterarSenha.html">Alterar senha</a></li>
 					<li><a href="#">Sair</a></li>
 				</ul>
 			</div>
@@ -36,4 +33,7 @@
 			</div>
 		</div>
 	</div>
+	
+	<script type="text/javascript" src="../../app/scritps/LIB/jquery-1.11.0.js "></script>
+    <script type="text/javascript" src="../../app/scritps/LIB/bootstrap.js"></script>
 </html>

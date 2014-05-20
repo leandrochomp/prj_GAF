@@ -27,15 +27,30 @@
 
 		}// end construc
                 
-              public static function MostraCategoria(){
-              	$sql = 'select * from categoria_aluno';
-                $cmd = mysql_query($sql);
-                if (mysql_num_rows($cmd) > 0){
-                	while ($row = mysql_fetch_array($cmd)){
-                    	echo '<option value='.$row[0].'>'.$row[1].'</option>';
-                    }
-                }
-              }
+	    public static function MostraCategoria(){
+	    	$sql = 'select * from categoria_aluno';
+	        $cmd = mysql_query($sql);
+	        if (mysql_num_rows($cmd) > 0){
+	        	while ($row = mysql_fetch_array($cmd)){
+	            	echo '<option value='.$row[0].'>'.$row[1].'</option>';
+	            }
+	        }
+	    }
+
+	    public static function Matricula($cod){
+			$matricula  = date("Y");
+			$matricula  .= date("m");
+				if(strlen($cod) == 1){
+					$matricula .= "0000".$cod;
+				} else if(strlen($cod) == 2) {
+					$matricula .= "000".$cod;
+				} else if(strlen($cod) == 3) {
+					$matricula .= "00".$cod;
+				} else if(strlen($cod) == 4) {
+					$matricula .= "0".$cod;
+				}
+			return $matricula;
+		}
 
               
 	}//end class Pessoa

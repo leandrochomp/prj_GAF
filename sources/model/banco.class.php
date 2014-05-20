@@ -170,7 +170,7 @@ abstract class banco{
 			if($cmd > 0 ){
 				$linha = array();
 				$row = mysql_fetch_array($cmd);
-					global $nome, $CPF, $email, $telefone, $cel, $sexo, $dtNasc, $login, $categoria, $peso, $alt, $peito, $cintura, $quadril, $braco, $coxa;
+					global $nome, $CPF, $email, $telefone, $cel, $sexo, $dtNasc, $login, $categoria, $peso, $alt, $peito, $cintura, $quadril, $braco, $coxa, $matricula;
 					$nome      = $row[2];
 					$CPF       = $row[3];
 					$email     = $row[4];
@@ -186,6 +186,7 @@ abstract class banco{
 					$quadril   = $row[21];
 					$braco     = $row[22];
 					$coxa      = $row[23];
+					$matricula = $row[24];
 					
 					echo $nome;
 			}else{

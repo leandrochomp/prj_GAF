@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html>
-<meta charset="UTF-8"/>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../../app/styles/bootstrap.css" rel="stylesheet">
     <link href="../../app/styles/style.css" rel="stylesheet">
+    <link href="../../app/styles/table.css" rel="stylesheet">
 </head>
-
-<body>
 	<div class="container">
 		<div class="row header">
 			<div class="col-md-12"></div>
@@ -22,10 +20,21 @@
 					<li><a href="#">Sair</a></li>
 				</ul>
 			</div>
+			<div class="col-md-8">
+				<div class="panel content">
+				<STRONG> LISTA DE ALUNOS </STRONG>
+				<hr/>
+				<?php
+					require_once('../../model/aluno.class.php');
+					$aluno = new aluno(null);
+
+					aluno::MostraAluno();
+				?>
+				</div>
+			</div>
 		</div>
 	</div>
-
-    <script type="text/javascript" src="../../app/scritps/LIB/jquery-1.11.0.js "></script>
+	
+	<script type="text/javascript" src="../../app/scritps/LIB/jquery-1.11.0.js "></script>
     <script type="text/javascript" src="../../app/scritps/LIB/bootstrap.js"></script>
-</body>
 </html>

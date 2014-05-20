@@ -6,8 +6,6 @@
     <link href="../../app/styles/bootstrap.css" rel="stylesheet">
     <link href="../../app/styles/style.css" rel="stylesheet">
     <link rel="stylesheet" href="../../app/styles/font-awesome.min.css">
-    <script type="text/javascript" src="../../app/scritps/LIB/jquery-1.11.0.js "></script>
-    <script type="text/javascript" src="../../app/scritps/LIB/bootstrap.js"></script>
 </head>
 
 <body>
@@ -20,8 +18,7 @@
 				<ul class="nav nav-pills nav-stacked menu font-24-bold">
 					<li><a href="cadastrarAluno.html">Cadastrar Aluno</a></li>
 					<li><a href="listarAluno.php">Listar Alunos</a></li>
-					<li><a href="alterarAluno.html">Alterar Aluno</a></li>
-					<li><a href="alterarSenha.html">Alterar sua senha</a></li>
+					<li><a href="alterarSenha.html">Alterar senha</a></li>
 					<li><a href="#">Sair</a></li>
 				</ul>
 			</div>
@@ -96,7 +93,7 @@
 					  	<label for="cel"> Coxa:</label>
 					    <input class="form-control coxa" type="text" name="txtCoxa" id="txtCoxa" />
 				     </p>
-
+					 <span id="msg"></span>
 					  <br>
 					    <button type="submit" class="btn btn-success" name="btnSalvar"> <i class="fa fa-check-circle"></i> </button> 
 					  	&nbsp &nbsp
@@ -107,5 +104,8 @@
 		</div>
 	</div>
 
+	<script type="text/javascript" src="../../app/scritps/LIB/jquery-1.11.0.js "></script>
+    <script type="text/javascript" src="../../app/scritps/LIB/bootstrap.js"></script>
+    <script src="../../app/scritps/js/Recepcionista/cadAluno.js"></script>
 </body>
 </html>

@@ -23,9 +23,10 @@
 		<div class="row">
 			<div class="col-md-4">
 				<ul class="nav nav-pills nav-stacked menu font-24-bold">
-					<li><a href="cadastrarAluno.html">Cadastrar Aluno</a></li>
+					<li><a href="cadastrarRecepcionista.html">Cadastrar Recepção</a></li>
+					<li><a href="cadastrarProfessor.html">Cadastrar Professor</a></li>
 					<li><a href="listarAluno.php">Listar Alunos</a></li>
-					<li><a href="alterarSenha.html">Alterar senha</a></li>
+					<li><a href="#">Listar funcionarios</a></li>
 					<li><a href="#">Sair</a></li>
 				</ul>
 			</div>
@@ -55,6 +56,7 @@
 					  <p>
 					  	<label for="data">Data Nascimento:</label>
 					    <input class="form-control dtNasc" type="date" name="dtNasc" id="dtNasc" value="<?php echo $dtNasc;?>"/>
+
 					  </p>
 					  <p>
 					    <label for="email">Email:</label>

@@ -19,11 +19,10 @@ $hoje = date("Y/m/d");
         ));
         
         	$codigo = $testando->getCod();
-        	echo $codigo;
         	
         	$aluno = new aluno(array(
 			'idPessoa'     	=> $codigo,
-			'idCategoria'   => 1, //arrumar isso aqui!
+			'idCategoria'   =>  1, //arrumar isso aqui!
 			'peso'	   	    =>  $_POST['txtPeso'],
 			'peito'	   	    =>  $_POST['txtPeito'],
 			'altura'		=>  $_POST['txtAltura'],
@@ -31,12 +30,15 @@ $hoje = date("Y/m/d");
 			'quadril'  		=>  $_POST['txtQuadril'],
 			'braco'   		=>  $_POST['txtBraco'],
 			'coxa'          =>  $_POST['txtCoxa'],
-			'matricula'     => '1111' //arrumar isso aqui!
+			//verificar isso com o joey
+			'matricula'     =>  aluno::Matricula($codigo) //'1111' arrumar isso aqui!
         ));
 		
-        
-  $testando->Inserir($testando);
-  $aluno->Inserir($aluno);
+
+    if(($aluno->Inserir($aluno)) && ($testando->Inserir($testando)))
+      echo "Cadastrou";
+  	else 
+      echo "Não cadastrou";
   
  //VER ISTO
  //$aluno::MostraUsuario(); //somente mostra os alunos!

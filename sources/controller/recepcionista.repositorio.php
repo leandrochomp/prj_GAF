@@ -21,7 +21,6 @@ $hoje = date("Y/m/d");
         ));
         
         	$codigo = $testando->getCod();
-        	//echo $codigo;
         	
         	$recepcionista = new recepcionista(array(
 			'idPessoa'     	=> $codigo,
