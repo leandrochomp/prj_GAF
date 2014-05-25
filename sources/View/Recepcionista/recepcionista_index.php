@@ -15,10 +15,9 @@
 		<div class="row">
 			<div class="col-md-4">
 				<ul class="nav nav-pills nav-stacked menu font-24-bold">
-					<li><a href="cadastrarRecepcionista.html">Cadastrar Recepção</a></li>
-					<li><a href="cadastrarProfessor.php">Cadastrar Professor</a></li>
+					<li><a href="cadastrarAluno.php">Cadastrar Aluno</a></li>
 					<li><a href="listarAluno.php">Listar Alunos</a></li>
-					<li><a href="#">Listar funcionarios</a></li>
+					<li><a href="alterarSenha.php">Alterar senha</a></li>
 					<li><a href="#">Sair</a></li>
 				</ul>
 			</div>

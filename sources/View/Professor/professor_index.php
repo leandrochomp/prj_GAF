@@ -1,11 +1,3 @@
-<?php 
-	//carregando o combo
-    require_once '../../model/atividade.class.php'; 
-    $atividade = new atividade();
-
-    $atividade->conecta();
- ?>
-
 <!DOCTYPE html>
 <html>
 <meta charset="UTF-8"/>
@@ -13,7 +5,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../../app/styles/bootstrap.css" rel="stylesheet">
     <link href="../../app/styles/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../app/styles/font-awesome.min.css">
 </head>
 
 <body>
@@ -31,18 +22,6 @@
 					<li><a href="alterarSenha.php">Alterar Senha</a></li>
 					<li><a href="#">Sair</a></li>
 				</ul>
-			</div>
-			<div class="col-md-8">
-				<div class="panel content">
-				<STRONG> CADASTRAR TREINO </STRONG>
-				<hr/>
-					<form id="FormCadTreino" name="FormCadTreino" method="post">
-					  <br>
-					  	<button type="submit" class="btn btn-success"> <i class="fa fa-check-circle"></i> </button> 
-					  	&nbsp
-					  	<button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i> </button>
-					</form>
-				</div>
 			</div>
 		</div>
 	</div>

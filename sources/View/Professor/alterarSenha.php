@@ -1,11 +1,3 @@
-<?php 
-	//carregando o combo
-    require_once '../../model/atividade.class.php'; 
-    $atividade = new atividade();
-
-    $atividade->conecta();
- ?>
-
 <!DOCTYPE html>
 <html>
 <meta charset="UTF-8"/>
@@ -34,19 +26,30 @@
 			</div>
 			<div class="col-md-8">
 				<div class="panel content">
-				<STRONG> CADASTRAR TREINO </STRONG>
+				<STRONG> ALTERAR SENHA </STRONG>
 				<hr/>
-					<form id="FormCadTreino" name="FormCadTreino" method="post">
+					<form id="FormUser" name="FormUser" method="post">
+					  <p>
+					    <label for="senhaatual">Senha Atual:</label>
+					    <input class="form-control pass" type="password" />
+					  </p>
+					  <p>
+					    <label for="novasenha">Nova Senha:</label>
+					    <input class="form-control pass" type="password"/>
+					  </p>
+					  <p>
+					    <label for="confirmarsenha">Confirmar Senha:</label>
+					    <input class="form-control newpass" type="password"/>
+					  </p>
 					  <br>
-					  	<button type="submit" class="btn btn-success"> <i class="fa fa-check-circle"></i> </button> 
+					  <button type="submit" class="btn btn-success"> <i class="fa fa-check-circle"></i> </button> 
 					  	&nbsp
-					  	<button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i> </button>
+					  	<button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i> 
 					</form>
 				</div>
 			</div>
 		</div>
 	</div>
-
     <script type="text/javascript" src="../../app/scritps/LIB/jquery-1.11.0.js "></script>
     <script type="text/javascript" src="../../app/scritps/LIB/bootstrap.js"></script>
 </body>

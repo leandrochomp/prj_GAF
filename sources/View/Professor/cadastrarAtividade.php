@@ -45,22 +45,22 @@
 					  </p>
 					  <p>
 					  	<label for="serie">Atividade/Aparelho:</label>
-					    <input class="form-control atividade" type="text" name="txtAtividade" id="txtAtividade" />
+					    <input class="form-control atividade" type="text" name="txtAtividade" id="txtAtividade" required="required"/>
 					  </p>
 
 					  <p>
 					    <label for="serie">Série:</label>
-					    <input class="form-control serie" type="text" name="txtSerie" id="txtSerie" />
+					    <input class="form-control serie" type="text" name="txtSerie" id="txtSerie" required="required"/>
 
 					    <label for="carga">Carga:</label>
-					    <input class="form-control carga" type="text" name="txtCarga" id="txtCarga" />					
+					    <input class="form-control carga" type="text" name="txtCarga" id="txtCarga" required="required"/>					
 					  </p>
 					  <p>
 					    <label for="repeticao">Repetição:</label>
-					    <input class="form-control repeticao" type="text" name="txtRep" id="txtRep" />
+					    <input class="form-control repeticao" type="text" name="txtRep" id="txtRep" required="required"/>
 					    
 					    <label for="tempo">Tempo:</label>
-					    <input class="form-control tempo" type="text" name="txtTempo" id="txtTempo" />
+					    <input class="form-control tempo" type="text" name="txtTempo" id="txtTempo" required="required"/>
 					  </p>
 					  <br>
 					  	<button type="submit" class="btn btn-success" id="btnSalvar"> <i class="fa fa-check-circle"></i> </button> 

@@ -31,12 +31,15 @@ $hoje = date("Y/m/d");
 			'braco'   		=>  $_POST['txtBraco'],
 			'coxa'          =>  $_POST['txtCoxa'],
 			//verificar isso com o joey
-			'matricula'     =>  aluno::Matricula($codigo) //'1111' arrumar isso aqui!
+			'matricula'     =>  aluno::Matricula($codigo)  //'1111' //arrumar isso aqui! 
+
         ));
 		
 
-    if(($aluno->Inserir($aluno)) && ($testando->Inserir($testando)))
+    if(($aluno->Inserir($aluno)) && ($testando->Inserir($testando))) {
       echo "Cadastrou";
+      //echo aluno::Matricula($codigo);
+    }
   	else 
       echo "Não cadastrou";
   

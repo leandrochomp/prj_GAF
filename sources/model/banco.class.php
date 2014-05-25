@@ -252,14 +252,85 @@ abstract class banco{
 				</li>
 				<li>
 					<div class="button">
+						<a href="EditarAluno.php?cod='.$info_pessoa[0].'" class="glyphicon glyphicon-align-justify"></a>
+						<a href="desativar.php?cod='.$info_pessoa[0].'" class="glyphicon glyphicon-remove"></a>
+						<a href="relatorio.php?cod='.$info_pessoa[0].'" class="glyphicon glyphicon-trash"></a>						
+					</div>
+				</li>
+			</ul>';
+		}
+		echo '</table>';
+		
+		}else{
+			
+			echo '<p>Nenhum registro encontrado</p>';
+		}
+    
+    }//end function MostraAluno
+
+
+    		 public static function MostraAlunoProfessor(){
+		//echo 'chamou metodos para ' . $objeto->tabela;
+		//$todos       = "select * from Pessoa inner join aluno on Pessoa.idPessoa = aluno.idPessoa where pessoa.status = 1 order by pessoa.nome;";
+		$todos = '
+					select * 
+					from Pessoa 
+					inner join aluno 
+					inner join categoria_aluno 
+					on Pessoa.idPessoa = aluno.idPessoa 
+					where pessoa.status = 1 and aluno.idCategoria = categoria_aluno.idCategoria
+					order by pessoa.nome;
+				';
+        $query       = mysql_query($todos);        	
+        	if($query > 0){
+        		 echo '<meta charset="utf8">';
+        		 echo '<table class="table">
+						<thead>
+							<tr>
+								<th>Nome</th>
+								<th>Matricula</th>
+								<th>Telefone</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>';
+						while($info_pessoa = mysql_fetch_array($query)){
+
+							echo '<tr>
+								<td>'.$info_pessoa[2].'</td>
+								<td>'.$info_pessoa[24].'</td>
+								<td>'.$info_pessoa[5].'</td>
+								<td class="buttons">
+									<div class="button">
+										<a href="cadastrarTreino.php?cod='.$info_pessoa[0].'"class="glyphicon glyphicon-align-justify"></a>
+										<a href="desativar.php?cod='.$info_pessoa[0].'" class="glyphicon glyphicon-remove"></a>
+										<a href="relatorio.php?cod='.$info_pessoa[0].'" class="glyphicon glyphicon-trash"></a>	
+									</div>
+								</td>				
+							</tr>
+						</tbody>';
+
+				echo '<ul class="list">
+				<li class="list-item">
+					<span class="list-description">Nome</span>
+					<span class="list-name">'.$info_pessoa[2].'</span>
+				</li>
+				<li class="list-item">
+					<span class="list-description">Matricula</span>	
+					<span class="list-name">'.$info_pessoa[24].'</span>
+				</li>
+				<li class="list-item">
+					<span class="list-description">Telefone</span>	
+					<span class="list-name">'.$info_pessoa[5].'</span>
+				</li>
+				<li>
+					<div class="button">
 						<a href="cadastrarTreino.php?cod='.$info_pessoa[0].'" class="glyphicon glyphicon-align-justify"></a>
 						<a href="desativar.php?cod='.$info_pessoa[0].'" class="glyphicon glyphicon-remove"></a>
 						<a href="relatorio.php?cod='.$info_pessoa[0].'" class="glyphicon glyphicon-trash"></a>						
 					</div>
 				</li>
 			</ul>';
-			
-			
 		}
 		echo '</table>';
 		

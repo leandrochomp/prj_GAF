@@ -1,11 +1,3 @@
-<?php 
-	//carregando o combo
-    require_once '../../model/atividade.class.php'; 
-    $atividade = new atividade();
-
-    $atividade->conecta();
- ?>
-
 <!DOCTYPE html>
 <html>
 <meta charset="UTF-8"/>
@@ -34,20 +26,25 @@
 			</div>
 			<div class="col-md-8">
 				<div class="panel content">
-				<STRONG> CADASTRAR TREINO </STRONG>
+				<STRONG> CADASTRAR CATEGORIA </STRONG>
 				<hr/>
-					<form id="FormCadTreino" name="FormCadTreino" method="post">
-					  <br>
-					  	<button type="submit" class="btn btn-success"> <i class="fa fa-check-circle"></i> </button> 
+					<form id="FormCadCategoria" name="FormCadCategoria" method="post" action="../../controller/categoria.repositorio.php">
+					  <p>
+					    <label for="serie">Grupo Muscular:</label>
+					    <input class="form-control grupoMusc" type="text" name="txtGrupo" id="txtGrupo" required="required"/>
+					  
+					  	<button type="submit" class="btn btn-success" name="btnSalvar" id="btnSalvar"> <i class="fa fa-check-circle"></i> </button> 
 					  	&nbsp
-					  	<button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i> </button>
+					  	<button type="button" class="btn btn-danger" name="btnCancelar" id="btnCancelar"><i class="fa fa-trash-o"></i> </button>
+					  	</p>
+					  	<span id="msg"> </span>
 					</form>
 				</div>
 			</div>
 		</div>
 	</div>
-
     <script type="text/javascript" src="../../app/scritps/LIB/jquery-1.11.0.js "></script>
     <script type="text/javascript" src="../../app/scritps/LIB/bootstrap.js"></script>
+    <script src="../../app/scritps/js/Professor/categoria.js"> </script>
 </body>
 </html>

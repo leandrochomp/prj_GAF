@@ -23,9 +23,9 @@
 		<div class="row">
 			<div class="col-md-4">
 				<ul class="nav nav-pills nav-stacked menu font-24-bold">
-					<li><a href="cadastrarAluno.html">Cadastrar Aluno</a></li>
+					<li><a href="cadastrarAluno.php">Cadastrar Aluno</a></li>
 					<li><a href="listarAluno.php">Listar Alunos</a></li>
-					<li><a href="alterarSenha.html">Alterar senha</a></li>
+					<li><a href="alterarSenha.php">Alterar senha</a></li>
 					<li><a href="#">Sair</a></li>
 				</ul>
 			</div>
@@ -33,7 +33,7 @@
 				<div class="panel content">
 				<STRONG> EDITAR ALUNO </STRONG>
 				<hr/>
-					<form id="FormCadAluno" name="FormCadAluno" method="post" action="../../model/banco.class.php?cod=<?php echo $_GET['cod']?>">
+					<form id="FormCadAluno" name="FormCadAluno" method="post" action="../../controller/editar.aluno.repositorio.php?cod=<?php echo $_GET['cod']?>">
 			          <p>
 					    <label for="nome">Nome Completo:</label>
 					    <input class="form-control bigInblock" type="text" name="txtNome" id="txtNome" title="Digite seu nome" value="<?php echo $nome;?>"/>

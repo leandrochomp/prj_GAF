@@ -15,7 +15,7 @@
 		<div class="row">
 			<div class="col-md-4">
 				<ul class="nav nav-pills nav-stacked menu font-24-bold">
-					<li><a href="cadastrarRecepcionista.html">Cadastrar Recepção</a></li>
+					<li><a href="cadastrarRecepcionista.php">Cadastrar Recepção</a></li>
 					<li><a href="cadastrarProfessor.php">Cadastrar Professor</a></li>
 					<li><a href="listarAluno.php">Listar Alunos</a></li>
 					<li><a href="#">Listar funcionarios</a></li>
@@ -24,8 +24,7 @@
 			</div>
 		</div>
 	</div>
-
-    <script type="text/javascript" src="../../app/scritps/LIB/jquery-1.11.0.js "></script>
+	<script type="text/javascript" src="../../app/scritps/LIB/jquery-1.11.0.js "></script>
     <script type="text/javascript" src="../../app/scritps/LIB/bootstrap.js"></script>
 </body>
 </html>

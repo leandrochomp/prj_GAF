@@ -38,8 +38,7 @@
 	    }
 
 	    public static function Matricula($cod){
-			$matricula  = date("Y");
-			$matricula  .= date("m");
+			$matricula = date("m");
 				if(strlen($cod) == 1){
 					$matricula .= "0000".$cod;
 				} else if(strlen($cod) == 2) {
@@ -50,6 +49,7 @@
 					$matricula .= "0".$cod;
 				}
 			return $matricula;
+
 		}
 
               
