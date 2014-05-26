@@ -6,8 +6,6 @@
     <link href="../../app/styles/bootstrap.css" rel="stylesheet">
     <link href="../../app/styles/style.css" rel="stylesheet">
     <link rel="stylesheet" href="../../app/styles/font-awesome.min.css">
-
- 	
 </head>
 
 <body>
@@ -90,7 +88,7 @@
     <script src="../../app/scritps/LIB/cpf-validate.1.0.min.js"></script>
     <script src="../../app/scritps/js/Professor/professor.js"> </script>
     <script src="../../app/scritps/LIB/jquery.maskedinput.js"> </script>
-    <script src="../../app/scritps/LIB/cpf-validate.1.0.min.js"> </script>
+    <!-- <script src="../../app/scritps/LIB/cpf-validate.1.0.min.js"> </script> -->
     
 
 </body>

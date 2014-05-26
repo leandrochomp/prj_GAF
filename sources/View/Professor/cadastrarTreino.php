@@ -36,10 +36,25 @@
 				<div class="panel content">
 				<STRONG> CADASTRAR TREINO </STRONG>
 				<hr/>
-					<form id="FormCadTreino" name="FormCadTreino" method="post">
-					  <br>
+					<form id="FormCadTreino" name="FormCadTreino" method="post" action="../../controller/treino.repositorio.php">
+					  <p>
+					    <label for="serie">Nome Treino:</label>
+					    <input class="form-control bigInblock" type="text" name="txtTreino" id="txtTreino" />
+					    <?php
+					    		$cmd = 'select * from atividade order by idCategoria asc;';
+								$sql = mysql_query($cmd) or die(mysql_error());
+								if(mysql_num_rows($sql) > 0){
+									while ($row = mysql_fetch_array($sql)){
+										 //echo '<pre>';
+	
+									//echo '<input type="checkbox" name="treino[]" value="'.$row[0].'/>';
+									echo '<p><input type="checkbox" name="treino[]" value="'.$row[0].'">'.$row[2].'</p>';
+								}	
+								// echo '<input type="checkbox" name="treino[]" value="'.$row[0].'">'.$row[1].'';
+							}
+					    ?>
 					  	<button type="submit" class="btn btn-success"> <i class="fa fa-check-circle"></i> </button> 
-					  	&nbsp
+
 					  	<button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i> </button>
 					</form>
 				</div>

@@ -28,7 +28,7 @@ $hoje = date("Y/m/d");
 			'nivel'  		=> $_POST['sltNivel']
         ));
 
-    if(($professor->Inserir($professor)) && ($testando->Inserir($testando)))
+    if(($testando->Inserir($testando)) && ($professor->Inserir($professor)))
       echo "Cadastrou";
   	else 
       echo "Não cadastrou";

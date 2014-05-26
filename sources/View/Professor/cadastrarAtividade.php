@@ -22,11 +22,11 @@
 		<div class="row">
 			<div class="col-md-4">
 				<ul class="nav nav-pills nav-stacked menu font-24-bold">
-					<li><a href="cadastrarCategoria.html">Cadastrar Categoria</a></li>
+					<li><a href="cadastrarCategoria.php">Cadastrar Categoria</a></li>
 					<li><a href="cadastrarAtividade.php">Cadastrar Atividade</a></li>
 					<li><a href="cadastrarTreino.php">Cadastrar Treino</a></li>
 					<li><a href="listarAluno.php">Listar Alunos</a></li>
-					<li><a href="alterarSenha.html">Alterar Senha</a></li>
+					<li><a href="alterarSenha.php">Alterar Senha</a></li>
 					<li><a href="#">Sair</a></li>
 				</ul>
 			</div>

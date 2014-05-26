@@ -39,18 +39,27 @@ abstract class base extends banco {
 	}//end getValue
 	
 	public function getCod(){
-		$sql = 'select max(idAluno)+1 from aluno;';
+		$sql = 'select max(idPESSOA)+1 from pessoa;';
 		$cmd = mysql_query($sql);
 		$exe = mysql_fetch_array($cmd);
 		//var_dump($exe[0]);
 		return $exe[0];
 	}//end getCod
 
+
+      public function getCodTreino(){
+        $sql = 'select max(idTreino) from treino;';
+        $cmd = mysql_query($sql);
+        $exe = mysql_fetch_array($cmd);
+        return $exe[0];
+      }    //end getCodTreino
+
+
 	function VerificaCPF($CPF){
     	$sltCPF = mysql_query("select CPF from pessoa where cpf = '$CPF'; ");
     		if (mysql_num_rows($sltCPF)>0) {
-    			//echo 'CPF ja cadastrado';
-                //echo '<p>CPF ja cadastrado</p>';
+    			//echo 'CPF j� cadastrado';
+                //echo '<p>CPF j� cadastrado</p>';
                 echo "<p><font color='red' style='font-size:15px;'>CPF j&aacute; cadastrado</font></p>";
     			return true;
     		}
@@ -60,9 +69,9 @@ abstract class base extends banco {
     	function VerificaEmail($email){
      		$sltEmail = mysql_query("select email from pessoa where email = '$email'; ");
     		if (mysql_num_rows($sltEmail)>0) {
-    			//echo '<p>Email ja cadastrado</p>';
+    			//echo '<p>Email j� cadastrado</p>';
                 echo "<p><font color='red' style='font-size:15px;'>Email j� cadastrado</font></p>";
-    			//$msg = '<p>Email ja cadastrado</p>';
+    			//$msg = '<p>Email j� cadastrado</p>';
     			return true;
     		}else{
     			$msg = '';

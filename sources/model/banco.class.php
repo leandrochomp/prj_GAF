@@ -64,6 +64,7 @@ abstract class banco{
 			//passa pro porximo registgro apos o laço
 			next($objeto->campos_valores);
 		}//end for
+		//echo $sql;
 			try {
 				$this->executaSQL($sql);
 				//verificar isso, indo duas vezes
@@ -72,6 +73,7 @@ abstract class banco{
 				return false;
 			}	
 	}//end class Inserir
+
 	
 	//Atualiza	
 	public function Atualizar($objeto){
@@ -101,7 +103,7 @@ abstract class banco{
 	
 	public function executaSQL($sql = NULL){
 		if($sql != NULL){
-			$query = mysql_query($sql) or $this->TrataErro(__FILE__,__FUNCTION__);
+			$query = mysql_query($sql) or die(mysql_error());
 			$this->linhasafetadas = mysql_affected_rows($this->conexao);
 		}else{
 			$this->TrataErro(__FILE__,__FUNCTION__,null,'Operação inválida',false);
@@ -178,17 +180,17 @@ abstract class banco{
 					$cel       = $row[6];
 					$dtNasc    = $row[9];
 					$login     = $row[10];
-					$categoria = $row[16];
-					$peso      = $row[17];
-					$alt       = $row[18];
-					$peito     = $row[19];
-					$cintura   = $row[20];
-					$quadril   = $row[21];
-					$braco     = $row[22];
-					$coxa      = $row[23];
-					$matricula = $row[24];
+					$categoria = $row[15];
+					$peso      = $row[16];
+					$alt       = $row[17];
+					$peito     = $row[18];
+					$cintura   = $row[19];
+					$quadril   = $row[20];
+					$braco     = $row[21];
+					$coxa      = $row[22];
+					$matricula = $row[23];
 					
-					echo $nome;
+					//echo $nome;
 			}else{
 				echo 'Não foi possivel realizar esta Operação!!!';
 			}
@@ -225,7 +227,7 @@ abstract class banco{
 
 							echo '<tr>
 								<td>'.$info_pessoa[2].'</td>
-								<td>'.$info_pessoa[24].'</td>
+								<td>'.$info_pessoa[23].'</td>
 								<td>'.$info_pessoa[5].'</td>
 								<td class="buttons">
 									<div class="button">
@@ -244,7 +246,7 @@ abstract class banco{
 				</li>
 				<li class="list-item">
 					<span class="list-description">Matricula</span>	
-					<span class="list-name">'.$info_pessoa[24].'</span>
+					<span class="list-name">'.$info_pessoa[23].'</span>
 				</li>
 				<li class="list-item">
 					<span class="list-description">Telefone</span>	
@@ -258,79 +260,8 @@ abstract class banco{
 					</div>
 				</li>
 			</ul>';
-		}
-		echo '</table>';
-		
-		}else{
 			
-			echo '<p>Nenhum registro encontrado</p>';
-		}
-    
-    }//end function MostraAluno
-
-
-    		 public static function MostraAlunoProfessor(){
-		//echo 'chamou metodos para ' . $objeto->tabela;
-		//$todos       = "select * from Pessoa inner join aluno on Pessoa.idPessoa = aluno.idPessoa where pessoa.status = 1 order by pessoa.nome;";
-		$todos = '
-					select * 
-					from Pessoa 
-					inner join aluno 
-					inner join categoria_aluno 
-					on Pessoa.idPessoa = aluno.idPessoa 
-					where pessoa.status = 1 and aluno.idCategoria = categoria_aluno.idCategoria
-					order by pessoa.nome;
-				';
-        $query       = mysql_query($todos);        	
-        	if($query > 0){
-        		 echo '<meta charset="utf8">';
-        		 echo '<table class="table">
-						<thead>
-							<tr>
-								<th>Nome</th>
-								<th>Matricula</th>
-								<th>Telefone</th>
-								<th></th>
-							</tr>
-						</thead>
-						<tbody>';
-						while($info_pessoa = mysql_fetch_array($query)){
-
-							echo '<tr>
-								<td>'.$info_pessoa[2].'</td>
-								<td>'.$info_pessoa[24].'</td>
-								<td>'.$info_pessoa[5].'</td>
-								<td class="buttons">
-									<div class="button">
-										<a href="cadastrarTreino.php?cod='.$info_pessoa[0].'"class="glyphicon glyphicon-align-justify"></a>
-										<a href="desativar.php?cod='.$info_pessoa[0].'" class="glyphicon glyphicon-remove"></a>
-										<a href="relatorio.php?cod='.$info_pessoa[0].'" class="glyphicon glyphicon-trash"></a>	
-									</div>
-								</td>				
-							</tr>
-						</tbody>';
-
-				echo '<ul class="list">
-				<li class="list-item">
-					<span class="list-description">Nome</span>
-					<span class="list-name">'.$info_pessoa[2].'</span>
-				</li>
-				<li class="list-item">
-					<span class="list-description">Matricula</span>	
-					<span class="list-name">'.$info_pessoa[24].'</span>
-				</li>
-				<li class="list-item">
-					<span class="list-description">Telefone</span>	
-					<span class="list-name">'.$info_pessoa[5].'</span>
-				</li>
-				<li>
-					<div class="button">
-						<a href="cadastrarTreino.php?cod='.$info_pessoa[0].'" class="glyphicon glyphicon-align-justify"></a>
-						<a href="desativar.php?cod='.$info_pessoa[0].'" class="glyphicon glyphicon-remove"></a>
-						<a href="relatorio.php?cod='.$info_pessoa[0].'" class="glyphicon glyphicon-trash"></a>						
-					</div>
-				</li>
-			</ul>';
+			
 		}
 		echo '</table>';
 		
