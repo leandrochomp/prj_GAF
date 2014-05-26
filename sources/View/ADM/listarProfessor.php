@@ -23,13 +23,13 @@
 			</div>
 			<div class="col-md-8">
 				<div class="panel content">
-				<STRONG> LISTA DE ALUNOS </STRONG>
+				<STRONG> LISTA DE PROFESSOR </STRONG>
 				<hr/>
 				<?php
-					require_once('../../model/aluno.class.php');
-					$aluno = new aluno(null);
+					require_once('../../model/professor.class.php');
+					$professor = new professor(null);
 
-					aluno::MostraAluno();
+					professor::MostraProfessor();
 				?>
 				</div>
 			</div>

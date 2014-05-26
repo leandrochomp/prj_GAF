@@ -18,7 +18,8 @@
 					<li><a href="cadastrarRecepcionista.php">Cadastrar Recepção</a></li>
 					<li><a href="cadastrarProfessor.php">Cadastrar Professor</a></li>
 					<li><a href="listarAluno.php">Listar Alunos</a></li>
-					<li><a href="#">Listar funcionarios</a></li>
+					<li><a href="listarProfessor.php">Listar Professor</a></li>
+					<li><a href="listarRecepcionista.php">Listar Recepcionista</a></li>
 					<li><a href="#">Sair</a></li>
 				</ul>
 			</div>

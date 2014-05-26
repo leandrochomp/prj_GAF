@@ -161,7 +161,7 @@ abstract class banco{
 
     //Não deu certo ... Fatal error: Class 'aluno' not found in C:\xampp\htdocs\GAF\View\Recepcionista\teste.php on line 5
         	
-    public static function PreencheTextAluno($codigo){
+    	public static function PreencheTextAluno($codigo){
 			$sql = 'select * 
 					from Pessoa 
 					inner join aluno
@@ -196,9 +196,61 @@ abstract class banco{
 			}
 				
 		}// end function PreencheText
+
+		public static function PreencheTextProfessor($codigo){
+			$sql = 'select * 
+					from Pessoa 
+					inner join professor
+					on Pessoa.idPessoa = professor.idPessoa 
+					where Pessoa.idPessoa = '.$codigo.' ;
+				';
+			$cmd = mysql_query($sql)or die(mysql_error());
+			if($cmd > 0 ){
+				$linha = array();
+				$row = mysql_fetch_array($cmd);
+					global $nome, $CPF, $email, $telefone, $cel, $sexo, $dtNasc, $login, $nivel;
+					$nome      = $row[2];
+					$CPF       = $row[3];
+					$email     = $row[4];
+					$telefone  = $row[5];
+					$cel       = $row[6];
+					$dtNasc    = $row[9];
+					$login     = $row[10];
+					$nivel     = $row[15];
+			}else{
+				echo 'Não foi possivel realizar esta Operação!!!';
+			}
+				
+		}// end function PreencheText
+
+
+		public static function PreencheTextRecepcionista($codigo){
+			$sql = 'select * 
+					from Pessoa 
+					inner join recepcionista
+					on Pessoa.idPessoa = recepcionista.idPessoa 
+					where Pessoa.idPessoa = '.$codigo.' ;
+				';
+			$cmd = mysql_query($sql)or die(mysql_error());
+			if($cmd > 0 ){
+				$linha = array();
+				$row = mysql_fetch_array($cmd);
+					global $nome, $CPF, $email, $telefone, $cel, $sexo, $dtNasc, $login;
+					$nome      = $row[2];
+					$CPF       = $row[3];
+					$email     = $row[4];
+					$telefone  = $row[5];
+					$cel       = $row[6];
+					$dtNasc    = $row[9];
+					$login     = $row[10];
+			}else{
+				echo 'Não foi possivel realizar esta Operação!!!';
+			}
+				
+		}// end function PreencheText
     
 
-		 public static function MostraAluno(){
+		public static function MostraAluno(){
 		//echo 'chamou metodos para ' . $objeto->tabela;
 		//$todos       = "select * from Pessoa inner join aluno on Pessoa.idPessoa = aluno.idPessoa where pessoa.status = 1 order by pessoa.nome;";
 		$todos = '
@@ -231,9 +283,9 @@ abstract class banco{
 								<td>'.$info_pessoa[5].'</td>
 								<td class="buttons">
 									<div class="button">
-										<a href="EditarAluno.php?cod='.$info_pessoa[0].'"class="glyphicon glyphicon-align-justify"></a>
-										<a href="desativar.php?cod='.$info_pessoa[0].'" class="glyphicon glyphicon-remove"></a>
-										<a href="relatorio.php?cod='.$info_pessoa[0].'" class="glyphicon glyphicon-trash"></a>	
+										<a href="EditarAluno.php?cod='.$info_pessoa[0].'"class="glyphicon glyphicon-pencil" title="editar"></a>
+										<a href="relatorio.php?cod='.$info_pessoa[0].'" class="glyphicon glyphicon-stats" title="relatorio"></a>	
+										<a href="desativar.php?cod='.$info_pessoa[0].'" class="glyphicon glyphicon-trash" title="desativar"></a>
 									</div>
 								</td>				
 							</tr>
@@ -254,9 +306,9 @@ abstract class banco{
 				</li>
 				<li>
 					<div class="button">
-						<a href="EditarAluno.php?cod='.$info_pessoa[0].'" class="glyphicon glyphicon-align-justify"></a>
-						<a href="desativar.php?cod='.$info_pessoa[0].'" class="glyphicon glyphicon-remove"></a>
-						<a href="relatorio.php?cod='.$info_pessoa[0].'" class="glyphicon glyphicon-trash"></a>						
+						<a href="EditarAluno.php?cod='.$info_pessoa[0].'"class="glyphicon glyphicon-pencil" title="editar"></a>
+						<a href="relatorio.php?cod='.$info_pessoa[0].'" class="glyphicon glyphicon-stats" title="relatorio"></a>	
+						<a href="desativar.php?cod='.$info_pessoa[0].'" class="glyphicon glyphicon-trash" title="desativar"></a>						
 					</div>
 				</li>
 			</ul>';
@@ -271,6 +323,140 @@ abstract class banco{
 		}
     
     }//end function MostraAluno
+
+    public static function MostraProfessor(){
+		$todos = '
+					select * 
+					from Pessoa 
+					inner join professor 
+					on Pessoa.idPessoa = professor.idPessoa 
+					order by pessoa.nome;
+				 ';
+        $query       = mysql_query($todos);        	
+        	if($query > 0){
+        		 echo '<meta charset="utf8">';
+        		 echo '<table class="table">
+						<thead>
+							<tr>
+								<th>Nome</th>
+								<th>CPF</th>
+								<th>Nivel</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>';
+						while($info_pessoa = mysql_fetch_array($query)){
+
+							echo '<tr>
+								<td>'.$info_pessoa[2].'</td>
+								<td>'.$info_pessoa[3].'</td>
+								<td>'.$info_pessoa[15].'</td>
+								<td class="buttons">
+									<div class="button">
+										<a href="editarProfessor.php?cod='.$info_pessoa[0].'"class="glyphicon glyphicon-pencil" title="editar"></a>
+										<a href="desativar.php?cod='.$info_pessoa[0].'" class="glyphicon glyphicon-trash" title="desativar"></a>	
+									</div>
+								</td>				
+							</tr>
+						</tbody>';
+
+				echo '<ul class="list">
+				<li class="list-item">
+					<span class="list-description">Nome</span>
+					<span class="list-name">'.$info_pessoa[2].'</span>
+				</li>
+				<li class="list-item">
+					<span class="list-description">CPF</span>	
+					<span class="list-name">'.$info_pessoa[3].'</span>
+				</li>
+				<li class="list-item">
+					<span class="list-description">Nivel</span>	
+					<span class="list-name">'.$info_pessoa[15].'</span>
+				</li>
+				<li>
+					<div class="button">
+						<a href="editarProfessor.php?cod='.$info_pessoa[0].'" class="glyphicon glyphicon-pencil" title="editar"></a>
+						<a href="desativar.php?cod='.$info_pessoa[0].'" class="glyphicon glyphicon-trash" title="desativar"></a>					
+					</div>
+				</li>
+			</ul>';
+		}
+		echo '</table>';
+		
+		}else{
+			
+			echo '<p>Nenhum registro encontrado</p>';
+		}
+    
+    }//end function MostraProfessor
+
+        		public static function MostraRecepcionista(){
+		$todos = '
+					select * 
+					from Pessoa 
+					inner join recepcionista 
+					on Pessoa.idPessoa = recepcionista.idPessoa 
+					order by pessoa.nome;
+				 ';
+        $query       = mysql_query($todos);        	
+        	if($query > 0){
+        		 echo '<meta charset="utf8">';
+        		 echo '<table class="table">
+						<thead>
+							<tr>
+								<th>Nome</th>
+								<th>CPF</th>
+								<th>Telefone</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>';
+						while($info_pessoa = mysql_fetch_array($query)){
+
+							echo '<tr>
+								<td>'.$info_pessoa[2].'</td>
+								<td>'.$info_pessoa[3].'</td>
+								<td>'.$info_pessoa[5].'</td>
+								<td class="buttons">
+									<div class="button">
+										<a href="editarRecepcionista.php?cod='.$info_pessoa[0].'"class="glyphicon glyphicon-pencil" title="editar"></a>
+										<a href="desativar.php?cod='.$info_pessoa[0].'" class="glyphicon glyphicon-trash" title="desativar"></a>
+									</div>
+								</td>				
+							</tr>
+						</tbody>';
+
+				echo '<ul class="list">
+				<li class="list-item">
+					<span class="list-description">Nome</span>
+					<span class="list-name">'.$info_pessoa[2].'</span>
+				</li>
+				<li class="list-item">
+					<span class="list-description">CPF</span>	
+					<span class="list-name">'.$info_pessoa[3].'</span>
+				</li>
+				<li class="list-item">
+					<span class="list-description">Telefone</span>	
+					<span class="list-name">'.$info_pessoa[5].'</span>
+				</li>
+				<li>
+					<div class="button">
+						<a href="editarRecepcionista.php?cod='.$info_pessoa[0].'" class="glyphicon glyphicon-pencil" title="editar"></a>
+						<a href="desativar.php?cod='.$info_pessoa[0].'" class="glyphicon glyphicon-trash" title="desativar"></a>
+					</div>
+				</li>
+			</ul>';
+		}
+		echo '</table>';
+		
+		}else{
+			
+			echo '<p>Nenhum registro encontrado</p>';
+		}
+    
+    }//end function MostraRecepcionista
+
+    
 
 }//end class
 ?>

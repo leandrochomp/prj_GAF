@@ -1,4 +1,11 @@
-<!DOCTYPE html>
+<?php 
+	require_once ('../../model/aluno.class.php');
+	require_once ('../../model/professor.class.php');
+	$codigo = $_GET['cod'];
+	$pessoa = new pessoa();
+	$pessoa->conecta();
+	pessoa::PreencheTextProfessor($codigo);
+?>
 <html>
 <meta charset="UTF-8"/>
 <head>
@@ -26,16 +33,16 @@
 			</div>
 			<div class="col-md-8">
 				<div class="panel content">
-				<STRONG> CADASTRAR PROFESSOR </STRONG>
+				<STRONG> EDITAR PROFESSOR </STRONG>
 				<hr/>
-					<form id="FormCadProf" name="FormCadProf" method="post" action="../../controller/professor.repositorio.php">
+					<form id="FormAlteraProf" name="FormAlteraProf" method="post" action="../../model/banco.class.php?cod=<?php echo $_GET['cod']?>">
 			          <p>
 					    <label for="nome">Nome Completo:</label>
-					    <input class="form-control bigInblock" type="text" name="txtNome" id="txtNome" required='required'/>
+					    <input class="form-control bigInblock" type="text" name="txtNome" id="txtNome" title="Digite seu nome" value="<?php echo $nome;?>"/>
 					  </p>
 					  <p>
 					    <label for="cpf">CPF:</label>
-					    <input class="form-control cpf" type="text" name="txtCPF" id="txtCPF" maxlength="11" onblur="return verificarCPF(this.value)" required='required'/>
+					    <input class="form-control cpf" type="text" name="txtCPF" id="txtCPF" title="Digite seu CPF" value="<?php echo $CPF;?>"/>
 
 					    <label for="sexo">Sexo:</label>
 					    <select class="form-control sexoInblock" name="sltSexo" id="sltSexo">
@@ -45,52 +52,45 @@
 					  </p>
 					  <p>
 					  	<label for="data">Data Nascimento:</label>
-					    <input class="form-control dtNasc" type="date" name="dtNasc" id="dtNasc" />
-					  
-					  	<label for="sexo">Nivel:</label>
-					    <select class="form-control nivel" name="sltNivel" id="sltNivel">
+					    <input class="form-control dtNasc" type="date" name="dtNasc" id="dtNasc" value="<?php echo $dtNasc;?>"/>
+
+					    <label for="sexo">Nivel:</label>
+					    <select class="form-control nivel" name="sltNivel" id="sltNivel" value="<?php echo $nivel;?>">
 					      <option>Professor</option>
 					      <option>Coordenador</option>
 					    </select>
 					  </p>
 					  <p>
 					    <label for="email">Email:</label>
-					    <input class="form-control email" type="email" name="txtEmail" id="txtEmail" />
+					    <input class="form-control email" type="text" name="txtEmail" id="txtEmail" title="digite seu email" value="<?php echo $email;?>"/>
 					  </p>
 					  <p>
 					    <label for="tel">Telefone Fixo:</label>
-					    <input class="form-control telFixo" type="text" name="txtFone" id="txtFone"/>
+					    <input class="form-control telFixo" type="text" name="txtFone" id="txtFone" value="<?php echo $telefone;?>"/>
 					  </p>
 					  <p>
 					  	<label for="cel"> Telefone Celular:</label>
-					    <input class="form-control telCel" type="text" name="txtCel" id="txtCel" />
+					    <input class="form-control telCel" type="text" name="txtCel" id="txtCel" value="<?php echo $cel;?>"/>
 					  </p>
+					  <!-- LOGIN/SENHA -->
 					  <hr>
 					  <p> 
 					  	<label for="cel"> Login:</label>
-					    <input class="form-control login" type="text" name="txtLogin" id="txtLogin" title="Digite o login" required='required'/>
+					    <input class="form-control login" type="text" name="txtLogin" id="txtLogin" value="<?php echo $login;?>" />
 					  </p>
-					  <span id="msg"></span>
+					  <p>
+
 					  <br>
-					  <div>
 					    <button type="submit" class="btn btn-success" name="btnSalvar" id="btnSalvar"> <i class="fa fa-check-circle"></i> </button> 
 					  	&nbsp &nbsp
 					  	<button type="button" class="btn btn-danger" name="btnCancel" id="btnCancel"><i class="fa fa-trash-o"></i> </button>
-
-					  </div>
 					</form>
 				</div>
 			</div>
 		</div>
 	</div>
-	
-	<script type="text/javascript" src="../../app/scritps/LIB/jquery-1.11.0.js"></script>
-    <script type="text/javascript" src="../../app/scritps/LIB/bootstrap.js"></script>
-    <script src="../../app/scritps/LIB/cpf-validate.1.0.min.js"></script>
-    <script src="../../app/scritps/js/Professor/professor.js"> </script>
-    <script src="../../app/scritps/LIB/jquery.maskedinput.js"> </script>
-    <!-- <script src="../../app/scritps/LIB/cpf-validate.1.0.min.js"> </script> -->
-    
 
+    <script type="text/javascript" src="../../app/scritps/LIB/jquery-1.11.0.js "></script>
+    <script type="text/javascript" src="../../app/scritps/LIB/bootstrap.js"></script>
 </body>
 </html>
