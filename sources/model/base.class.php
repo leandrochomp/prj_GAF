@@ -47,12 +47,19 @@ abstract class base extends banco {
 	}//end getCod
 
 
-      public function getCodTreino(){
+    public function getCodTreino(){
         $sql = 'select max(idTreino) from treino;';
         $cmd = mysql_query($sql);
         $exe = mysql_fetch_array($cmd);
         return $exe[0];
-      }    //end getCodTreino
+    }    //end getCodTreino
+
+    public function getCodAluno(){
+        $sql = 'select max(idTreino) from treino;';
+        $cmd = mysql_query($sql);
+        $exe = mysql_fetch_array($cmd);
+        return $exe[0];
+    }    //end getCodTreino
 
 
 	function VerificaCPF($CPF){

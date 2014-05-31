@@ -1,0 +1,8 @@
+terminar o cadastrar treino aluno
+analisar o SESSION, ta pegando generico, se logar como professor, tem acesso a todas as paginas
+
+alterar as telas do professor (atividade, treino, categoria)
+
+ver como pega as combos, e tras salvas, ou salvar ao editar.
+
+listar treino aluno ja funciona, subir backup dia 31-05

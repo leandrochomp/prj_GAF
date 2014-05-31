@@ -46,7 +46,7 @@
 $(document).ready( function () {
     //$("#txtCPF").mask("999.999.999-99"); //mascarando para cpf
 
-	$('#FormCadAluno').submit( function() {
+	$('#FormAlteraProf').submit( function() {
 		var that = this,
 		dados = $(this).serialize();
 		// if (!verificarCPF()){
@@ -60,8 +60,9 @@ $(document).ready( function () {
 			success : function (responseText) {
 				document.getElementById('msg').style.color="red";
 				document.getElementById('msg').innerHTML = responseText;
+				window.location.href = '../../../GAF/View/ADM/listarProfessor.php'
 				//LIMPA O FORM INTEIRO APÓS O CADASTRO
-				$('#FormCadAluno').trigger("reset");
+				$('#FormAlteraProf').trigger("reset");
 			}
 		});
 
@@ -76,7 +77,7 @@ $(document).ready( function () {
 	
 	//limpando o form professor
 	$( "#btnCancel" ).click(function() {
-		//resetForm($('#FormCadAluno'))
-		$('#FormCadAluno').trigger("reset");
+		//resetForm($('#FormAlteraProf'))
+		$('#FormAlteraProf').trigger("reset");
 	});
 });

@@ -18,11 +18,16 @@
 
 <?php 
 	//carregando o combo
-	require_once '../../model/categoria.class.php'; 
+	require_once '../../model/categoria.class.php';
+	require_once '../../model/atividade.class.php'; 
     $categoria = new categoria();
     $categoria->conecta();
 
- ?>
+    $codigo = $_GET['cod'];
+	$atividade = new atividade();
+	$atividade->conecta();
+	atividade::PreencheAtividade($codigo);
+?>
 <!DOCTYPE html>
 <html>
 <meta charset="UTF-8"/>
@@ -56,7 +61,7 @@
 				<div class="panel content">
 				<STRONG> CADASTRAR ATIVIDADE </STRONG>
 				<hr/>
-					<form id="FormCadAtividade" name="FormCadAtividade" method="post" action="../../controller/atividade.repositorio.php">
+					<form id="FormEditAti" name="FormEditAti" method="post" action="../../model/atividade.class.php?cod=<?php echo $_GET['cod']?>">
 					  <p>
 					  <label for="grupo">Grupo Muscular:</label>
                       <select class="form-control grupoMusc" name="sltGrupo" id="sltGrupo">
@@ -67,22 +72,22 @@
 					  </p>
 					  <p>
 					  	<label for="serie">Atividade/Aparelho:</label>
-					    <input class="form-control atividade" type="text" name="txtAtividade" id="txtAtividade" required="required"/>
+					    <input class="form-control atividade" type="text" name="txtAtividade" id="txtAtividade" value="<?php echo $nome;?>"/>
 					  </p>
 
 					  <p>
 					    <label for="serie">Série:</label>
-					    <input class="form-control serie" type="text" name="txtSerie" id="txtSerie" required="required"/>
+					    <input class="form-control serie" type="text" name="txtSerie" id="txtSerie" value="<?php echo $serie;?>"/>
 
 					    <label for="carga">Carga:</label>
-					    <input class="form-control carga" type="text" name="txtCarga" id="txtCarga" required="required"/>					
+					    <input class="form-control carga" type="text" name="txtCarga" id="txtCarga" value="<?php echo $carga;?>"/>					
 					  </p>
 					  <p>
 					    <label for="repeticao">Repetição:</label>
-					    <input class="form-control repeticao" type="text" name="txtRep" id="txtRep" required="required"/>
+					    <input class="form-control repeticao" type="text" name="txtRep" id="txtRep" value="<?php echo $repeticao;?>"/>
 					    
 					    <label for="tempo">Tempo:</label>
-					    <input class="form-control tempo" type="text" name="txtTempo" id="txtTempo" required="required"/>
+					    <input class="form-control tempo" type="text" name="txtTempo" id="txtTempo" value="<?php echo $tempo;?>"/>
 					  </p>
 					  <br>
 					  	<button type="submit" class="btn btn-success" id="btnSalvar"> <i class="fa fa-check-circle"></i> </button> 

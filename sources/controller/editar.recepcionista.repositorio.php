@@ -16,35 +16,19 @@ $codigo = $_GET['cod'];
 			'login'         => $_POST['txtLogin'],
 			'dtCadastro'	=> $hoje
         ));
-       
-        	$matricula = aluno::Matricula($testando->getCod());
-
 
         	$aluno = new aluno(array(
 			'idPessoa'     	=> $codigo,
-			'idCATEGORIA'   =>  1, //arrumar isso aqui!
-			'peso'	   	    =>  $_POST['txtPeso'],
-			'peito'	   	    =>  $_POST['txtPeito'],
-			'altura'		=>  $_POST['txtAltura'],
-			'cintura' 		=>  $_POST['txtCintura'],
-			'quadril'  		=>  $_POST['txtQuadril'],
-			'braco'   		=>  $_POST['txtBraco'],
-			'coxa'          =>  $_POST['txtCoxa'],
-			'matricula'     =>  $matricula
         	));
-		//var_dump($matricula);
-$sql = "select idAluno from aluno where idPessoa = ".$codigo.";";
+
+$sql = "select idRecepcionista from Recepcionista where idPessoa = ".$codigo.";";
 $sql2 = mysql_query($sql);
 $cmd = mysql_fetch_array($sql2);
 $codA = $cmd[0];
 
 $testando->valorPk = $codigo;
-// $testando->Atualizar($testando);
 
 $aluno->valorPk = $codA;
-// $aluno->Atualizar($aluno);
-
-
 
   	if (($testando->Atualizar($testando)) &&  ($aluno->Atualizar($aluno)))
 	 	echo "Alterou";

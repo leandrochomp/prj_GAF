@@ -468,7 +468,7 @@ CADASTROS
 	color: #FFF;
 	background-color: #f35b00;
 	float:left;
-	width: 200px;
+	width: 179px;
 	border-radius: 5px;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
@@ -483,6 +483,12 @@ CADASTROS
 	list-style: none;
 	text-align: center;
 	-webkit-padding-start: 0px;
+}
+
+.buttonsRight{
+	margin-top: 20px;
+	float: right;
+	clear:both;
 }
 
 

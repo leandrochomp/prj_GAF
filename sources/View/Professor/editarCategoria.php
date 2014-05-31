@@ -16,6 +16,13 @@
 	// FIM - VERIFICAR SE ESTÁ LOGADO
  ?>
 
+<?php 
+	require_once ('../../model/categoria.class.php');
+	$codigo = $_GET['cod'];
+	$categoria = new categoria();
+	$categoria->conecta();
+	categoria::PreencheCategoria($codigo);
+?>
 <!DOCTYPE html>
 <html>
 <meta charset="UTF-8"/>
@@ -23,6 +30,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../../app/styles/bootstrap.css" rel="stylesheet">
     <link href="../../app/styles/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../app/styles/font-awesome.min.css">
 </head>
 
 <body>
@@ -36,23 +44,33 @@
 		<div class="row">
 			<div class="col-md-4">
 				<ul class="nav nav-pills nav-stacked menu font-24-bold">
-					<li><a href="#">Visualizar Treino</a></li>
+					<li><a href="listarCategoria.php">Categoria</a></li>
+					<li><a href="listarAtividade.php">Atividade</a></li>
+					<li><a href="listarTreino.php">Treino</a></li>
+					<li><a href="listarAluno.php">Listar Alunos</a></li>
+					<li><a href="alterarSenha.php">Alterar Senha</a></li>
+					<li><a href="../../index.php">Sair</a></li>
 				</ul>
 			</div>
 			<div class="col-md-8">
 				<div class="panel content">
-				<STRONG> VISUALIZAR TREINO </STRONG>
+				<STRONG> EDITAR CATEGORIA </STRONG>
 				<hr/>
-				<?php
-					require_once('../../model/treino.class.php');
-					$treino = new treino(null);					
-					treino::MostraTreinoAluno($_SESSION['id']);
-				?>
-				<br class="clear" />
+					<form id="FormEditCat" name="FormEditCat" method="post" action="../../controller/editar.categoria.repositorio.php?cod=<?php echo $_GET['cod']?>">
+					  <p>
+					    <label for="serie">Grupo Muscular:</label>
+					    <input class="form-control grupoMusc" type="text" name="txtGrupo" id="txtGrupo" value="<?php echo $nome;?>"/>
+					  
+					  	<button type="submit" class="btn btn-success" name="btnSalvar" id="btnSalvar"> <i class="fa fa-check-circle"></i> </button> 
+					  	&nbsp
+					  	<button type="button" class="btn btn-danger" name="btnCancelar" id="btnCancelar"><i class="fa fa-trash-o"></i> </button>
+					  	</p>
+					  	<span id="msg"> </span>
+					</form>
 				</div>
+			</div>
 		</div>
 	</div>
-	
     <script type="text/javascript" src="../../app/scritps/LIB/jquery-1.11.0.js "></script>
     <script type="text/javascript" src="../../app/scritps/LIB/bootstrap.js"></script>
 </body>

@@ -36,9 +36,9 @@
 		<div class="row">
 			<div class="col-md-4">
 				<ul class="nav nav-pills nav-stacked menu font-24-bold">
-					<li><a href="cadastrarCategoria.php">Cadastrar Categoria</a></li>
-					<li><a href="cadastrarAtividade.php">Cadastrar Atividade</a></li>
-					<li><a href="cadastrarTreino.php">Cadastrar Treino</a></li>
+					<li><a href="listarCategoria.php">Categoria</a></li>
+					<li><a href="listarAtividade.php">Atividade</a></li>
+					<li><a href="listarTreino.php">Treino</a></li>
 					<li><a href="listarAluno.php">Listar Alunos</a></li>
 					<li><a href="alterarSenha.php">Alterar Senha</a></li>
 					<li><a href="../../index.php">Sair</a></li>

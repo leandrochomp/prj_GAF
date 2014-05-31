@@ -1,6 +1,6 @@
 // JavaScript Document
 $(document).ready( function () {
-	$('#FormCadAtividade').submit( function() {
+	$('#FormCadTreino').submit( function() {
 		var that = this,
 			dados = $(this).serialize();
 		
@@ -11,8 +11,8 @@ $(document).ready( function () {
 			success : function (responseText) {
 				document.getElementById('msg').style.color="red";
 				document.getElementById('msg').innerHTML = responseText;
-				window.location.href = '../../../GAF/View/Professor/listarAtividade.php'
-				$('#FormCadAtividade').trigger("reset"); 
+				window.location.href = '../../../GAF/View/Professor/listarTreino.php'
+				$('#FormCadTreino').trigger("reset"); 
 			}
 		});
 		
@@ -20,7 +20,6 @@ $(document).ready( function () {
 	});
 
 	$( "#btnCancelar" ).click(function() {
-		//resetForm($('#FormCadRecp'))
-		$('#FormCadAtividade').trigger("reset");
+		$('#FormCadTreino').trigger("reset");
 	});
 });

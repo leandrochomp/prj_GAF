@@ -11,6 +11,7 @@ $(document).ready( function () {
 			success : function (responseText) {
 				document.getElementById('msg').style.color="red";
 				document.getElementById('msg').innerHTML = responseText;
+				window.location.href = '../../../GAF/View/Professor/listarCategoria.php'
 				document.getElementById('txtGrupo').value = ''; 
 			}
 		});

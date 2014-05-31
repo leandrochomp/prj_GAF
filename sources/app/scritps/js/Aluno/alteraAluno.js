@@ -44,9 +44,8 @@
 // }
 
 $(document).ready( function () {
-    //$("#txtCPF").mask("999.999.999-99"); //mascarando para cpf
-
-	$('#FormCadAluno').submit( function() {
+	    //$("#txtCPF").mask("999.999.999-99"); //mascarando cpf
+		$('#FormCadAluno').submit( function() {
 		var that = this,
 		dados = $(this).serialize();
 		// if (!verificarCPF()){
@@ -60,12 +59,14 @@ $(document).ready( function () {
 			success : function (responseText) {
 				document.getElementById('msg').style.color="red";
 				document.getElementById('msg').innerHTML = responseText;
+                window.location.href = '../../../GAF/View/Recepcionista/listarAluno.php'
 				//LIMPA O FORM INTEIRO APÓS O CADASTRO
 				$('#FormCadAluno').trigger("reset");
 			}
 		});
 
 		return false;
+
 	});
 
 	//isto não esta em uso, mas é uma forma de se limpar o form e uma maneira facil
@@ -76,7 +77,7 @@ $(document).ready( function () {
 	
 	//limpando o form professor
 	$( "#btnCancel" ).click(function() {
-		//resetForm($('#FormCadAluno'))
+		//resetForm($('#FormCadRecp'))
 		$('#FormCadAluno').trigger("reset");
 	});
 });

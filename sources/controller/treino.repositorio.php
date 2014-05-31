@@ -25,6 +25,11 @@ require_once '../model/atividade.class.php';
 
         } 
       }
-    $treino->Inserir($treino);
+    
+    if($treino->Inserir($treino))
+      echo "Cadastrou";
+    else 
+      echo "Não cadastrou";
+
     //$treino_atv->Inserir($treino_atv);
   ?>
