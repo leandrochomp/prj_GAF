@@ -68,7 +68,6 @@
 					  	<label for="cel"> Telefone Celular:</label>
 					    <input class="form-control telCel" type="text" name="txtCel" id="txtCel" value="<?php echo $cel;?>"/>
 					  </p>
-					  <!-- LOGIN/SENHA -->
 					  <hr>
 					  <p> 
 					  	<label for="cel"> Login:</label>
@@ -78,7 +77,6 @@
 
 					  </p>
 					  <hr>
-					  <!-- MEDIDAS -->
 					  <p> 
 					  	<label for="cel"> Peso:</label>
 					    <input class="form-control peso" type="text" name="txtPeso" id="txtPeso" value="<?php echo $peso;?>"/>
@@ -104,7 +102,7 @@
 					  	<label for="cel"> Coxa:</label>
 					    <input class="form-control coxa" type="text" name="txtCoxa" id="txtCoxa" value="<?php echo $coxa;?>"/>
 				     </p>
-
+					<span id="msg"></span>
 					  <br>
 					    <button type="submit" class="btn btn-success" name="btnSalvar" id="btnSalvar"> <i class="fa fa-check-circle"></i> </button> 
 					  	&nbsp &nbsp

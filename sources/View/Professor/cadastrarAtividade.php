@@ -1,8 +1,10 @@
 <?php 
 	//carregando o combo
 	require_once '../../model/categoria.class.php'; 
+	require_once '../../model/pessoa.class.php';
     $categoria = new categoria();
     $categoria->conecta();
+
  ?>
 <!DOCTYPE html>
 <html>
@@ -27,7 +29,7 @@
 					<li><a href="cadastrarTreino.php">Cadastrar Treino</a></li>
 					<li><a href="listarAluno.php">Listar Alunos</a></li>
 					<li><a href="alterarSenha.php">Alterar Senha</a></li>
-					<li><a href="#">Sair</a></li>
+					<li><a href="">Sair</a></li>
 				</ul>
 			</div>
 			<div class="col-md-8">

@@ -26,15 +26,25 @@
 			$this->campoPk = "idPessoa";
 		}// end construc		
                 
-                public static function validaLogin($login, $senha){                   
-                    $consulta = mysql_query("SELECT * FROM pessoa order by idPESSOA");
-                                                            
-                    while ($pessoa = mysql_fetch_array($consulta)){                        
-                        if (($pessoa['login'] == $login) && ($pessoa['senha'] == $senha)){
-                            return $pessoa['idPERFIL'];
-                        }
-                    }                    
-                    return NULL;
+        public static function validaLogin($login, $senha){                   
+            $consulta = mysql_query("SELECT * FROM pessoa order by idPESSOA");
+                                                    
+            while ($pessoa = mysql_fetch_array($consulta)){                        
+                if (($pessoa['login'] == $login) && ($pessoa['senha'] == $senha)){
+                	$retorno = array($pessoa['idPERFIL'], $pessoa['idPESSOA'], $pessoa['nome']);
+                    return $retorno;
                 }
-        }//end class Pessoa
+            }                    
+            return NULL;
+        }
+       
+       	public static function usuarioLogado(){
+            if($_SESSION['id'] == NULL){
+            	return false;	
+            } else {
+            	return true;
+            }                                                                    
+            
+        }
+     }//end class Pessoa
 ?>

@@ -1,3 +1,7 @@
+<?php 
+	session_start();
+ ?>
+
 <!DOCTYPE html>
 <html>
 <meta charset="UTF-8"/>
@@ -18,6 +22,17 @@
 					<li><a href="#">Visualizar Treino</a></li>
 				</ul>
 			</div>
+			<div class="col-md-8">
+				<div class="panel content">
+				<STRONG> VISUALIZAR TREINO </STRONG>
+				<hr/>
+				<?php
+					require_once('../../model/aluno.class.php');
+					$aluno = new aluno(null);					
+					aluno::MostraTreino($_SESSION['id']);
+				?>
+				<br class="clear" />
+				</div>
 		</div>
 	</div>
 	

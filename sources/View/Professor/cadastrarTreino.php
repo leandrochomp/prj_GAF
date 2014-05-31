@@ -40,19 +40,17 @@
 					  <p>
 					    <label for="serie">Nome Treino:</label>
 					    <input class="form-control bigInblock" type="text" name="txtTreino" id="txtTreino" />
-					    <?php
+					  </p>
+					  <?php
 					    		$cmd = 'select * from atividade order by idCategoria asc;';
 								$sql = mysql_query($cmd) or die(mysql_error());
 								if(mysql_num_rows($sql) > 0){
 									while ($row = mysql_fetch_array($sql)){
-										 //echo '<pre>';
-	
-									//echo '<input type="checkbox" name="treino[]" value="'.$row[0].'/>';
-									echo '<p><input type="checkbox" name="treino[]" value="'.$row[0].'">'.$row[2].'</p>';
+									echo '<p class="cmbTreino"><input type="checkbox" name="treino[]" value="'.$row[0].'">'.$row[2].'</p>';
 								}	
-								// echo '<input type="checkbox" name="treino[]" value="'.$row[0].'">'.$row[1].'';
 							}
 					    ?>
+					  	<br class="clear" />
 					  	<button type="submit" class="btn btn-success"> <i class="fa fa-check-circle"></i> </button> 
 
 					  	<button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i> </button>

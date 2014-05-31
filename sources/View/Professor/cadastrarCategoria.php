@@ -21,7 +21,7 @@
 					<li><a href="cadastrarTreino.php">Cadastrar Treino</a></li>
 					<li><a href="listarAluno.php">Listar Alunos</a></li>
 					<li><a href="alterarSenha.php">Alterar Senha</a></li>
-					<li><a href="#">Sair</a></li>
+					<li><a href="../../index.php">Sair</a></li>
 				</ul>
 			</div>
 			<div class="col-md-8">

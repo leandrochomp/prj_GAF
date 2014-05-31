@@ -95,9 +95,14 @@ abstract class banco{
 		}//end for
 		$sql .= "where " . $objeto->campoPk . "= ";
 		$sql .= is_numeric($objeto->valorPk) ? $objeto->valorPk : "'".$objeto->valorPk."';";
-		//apagar depois esse echo
-		echo $sql;
-		return $this->executaSQL($sql);
+		
+		try {
+			$this->executaSQL($sql);
+			//verificar isso, indo duas vezes
+			return true;
+		} catch (Exception $e) {
+			return false;
+		}			
 	}// end class Atualizar
 	
 	
@@ -283,7 +288,7 @@ abstract class banco{
 								<td>'.$info_pessoa[5].'</td>
 								<td class="buttons">
 									<div class="button">
-										<a href="EditarAluno.php?cod='.$info_pessoa[0].'"class="glyphicon glyphicon-pencil" title="editar"></a>
+										<a href="editarAluno.php?cod='.$info_pessoa[0].'"class="glyphicon glyphicon-pencil" title="editar"></a>
 										<a href="relatorio.php?cod='.$info_pessoa[0].'" class="glyphicon glyphicon-stats" title="relatorio"></a>	
 										<a href="desativar.php?cod='.$info_pessoa[0].'" class="glyphicon glyphicon-trash" title="desativar"></a>
 									</div>
@@ -306,14 +311,12 @@ abstract class banco{
 				</li>
 				<li>
 					<div class="button">
-						<a href="EditarAluno.php?cod='.$info_pessoa[0].'"class="glyphicon glyphicon-pencil" title="editar"></a>
+						<a href="editarAluno.php?cod='.$info_pessoa[0].'"class="glyphicon glyphicon-pencil" title="editar"></a>
 						<a href="relatorio.php?cod='.$info_pessoa[0].'" class="glyphicon glyphicon-stats" title="relatorio"></a>	
 						<a href="desativar.php?cod='.$info_pessoa[0].'" class="glyphicon glyphicon-trash" title="desativar"></a>						
 					</div>
 				</li>
 			</ul>';
-			
-			
 		}
 		echo '</table>';
 		
@@ -455,8 +458,5 @@ abstract class banco{
 		}
     
     }//end function MostraRecepcionista
-
-    
-
 }//end class
 ?>

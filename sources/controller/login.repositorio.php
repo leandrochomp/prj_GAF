@@ -10,7 +10,10 @@ require_once '../model/pessoa.class.php';
  //pega os dados da view e confere se existe no banco, e qual o seu perfil
  $result = $testando->validaLogin($_POST['txtLoginTela'], $_POST['txtSenhaTela']);
   if($result != NULL){
-      switch ($result){
+      session_start();
+      $_SESSION['id'] = $result[1];
+      $_SESSION['nome'] = $result[2];
+      switch ($result[0]){
           case 1:
               echo  'ADM';
               break;

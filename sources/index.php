@@ -1,3 +1,12 @@
+<?php 	
+	session_start();
+	if(isset($_SESSION['id'])){
+		unset($_SESSION['id']);
+		unset($_SESSION['nome']);
+	}
+	session_destroy();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>

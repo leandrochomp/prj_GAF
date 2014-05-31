@@ -28,22 +28,7 @@ body{
 	border-radius: 5px;
 	padding: 10px 20px 50px;
 }
-/*Comentei pois não achei legal essas alterações*/
-/*.content form input {
-	border-radius: 3px;
-	border:1px solid #f35b00;
-	box-shadow: 0 2px 5px #BEBEBE inset;
-}*/
-/*.content form input[type="submit"]{
-	width: 100px;
-	height: 30px;
-	background-color: #f35b00;
-	color: #ffffff;
-	margin: 10px 5px;
-	box-shadow: none;
-	font-weight: bold;
-}*/
-/*aqui é onde ele deixa o campo selecionado na cor laranja*/
+
 .form-control:focus {
 	border-color: #FF6F3E;
 	outline: 0;
@@ -455,4 +440,50 @@ CADASTROS
 .icon-search :hover{
 	background-color: #FF7648;
 }
+
+.logado {
+	background-color: #f35b00;	
+	margin-right: -15px;
+	margin-top: -50px;
+	padding: 3px 10px;
+	width: 265px;
+	border-radius: 0 0 5px 5px;
+	-webkit-border-radius:  0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px;
+	float: right;	
+	color: #FFF;
+}
+
+.cmbTreino{
+	float: left;
+	width: 189px;
+}
+
+.clear{
+	clear:both;
+}
+
+.divTreinoAluno{
+	text-align: center;
+	color: #FFF;
+	background-color: #f35b00;
+	float:left;
+	width: 200px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	margin: 5px;	
+}
+
+.ulTreinoAluno{
+	text-align: center;
+	color: #000;
+	font-weight: bold;
+	background-color: #FFC2A1;
+	list-style: none;
+	text-align: center;
+	-webkit-padding-start: 0px;
+}
+
+
 /*FIM - ICONS*/

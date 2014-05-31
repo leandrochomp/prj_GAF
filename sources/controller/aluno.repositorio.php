@@ -41,6 +41,12 @@ $hoje = date("Y/m/d");
        echo "Cadastrou";
   	else 
       echo "Não cadastrou";
+
+
+// $testando->valorPk = $codigo;
+// $testando->Atualizar($testando);
+// $aluno->valorPk = $codigo;
+// $aluno->Atualizar($aluno);
   
  //VER ISTO
  //$aluno::MostraUsuario(); //somente mostra os alunos!
@@ -51,5 +57,7 @@ $hoje = date("Y/m/d");
 //$testando->Desativar($testando);
 //$testando->AtivarUsuario($testando);
 //$testando->MostraUsuario($testando);
+
+
 
 ?>

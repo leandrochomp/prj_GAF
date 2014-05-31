@@ -86,11 +86,7 @@
 	
 	<script type="text/javascript" src="../../app/scritps/LIB/jquery-1.11.0.js"></script>
     <script type="text/javascript" src="../../app/scritps/LIB/bootstrap.js"></script>
-    <script src="../../app/scritps/LIB/cpf-validate.1.0.min.js"></script>
     <script src="../../app/scritps/js/Professor/professor.js"> </script>
     <script src="../../app/scritps/LIB/jquery.maskedinput.js"> </script>
-    <!-- <script src="../../app/scritps/LIB/cpf-validate.1.0.min.js"> </script> -->
-    
-
 </body>
 </html>
