@@ -130,7 +130,7 @@
 					  <br>
 					    <button type="submit" class="btn btn-success" name="btnSalvar" id="btnSalvar"> <i class="fa fa-check-circle"></i> </button> 
 					  	&nbsp &nbsp
-					  	<button type="button" class="btn btn-danger" name="btnCancel" id="btnCancel"><i class="fa fa-trash-o"></i> </button>
+					  	<button type="button" class="btn btn-warning" id="btnCancelar" name="btnCancelar"><i class="fa fa-eraser"></i> </button>
 					</form>
 				</div>
 			</div>

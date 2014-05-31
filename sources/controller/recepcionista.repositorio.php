@@ -1,6 +1,7 @@
 <?php
 require_once '../model/recepcionista.class.php';
-$hoje = date("Y/m/d");  
+$hoje = date("Y/m/d");
+$data = ("Y/m/d")($_POST['dtNasc']);
 
 
 // arrumar sexo!!!!!
@@ -26,8 +27,10 @@ $hoje = date("Y/m/d");
 			'idPessoa'     	=> $codigo,
         ));
   
-  if(($testando->Inserir($testando)) && ($recepcionista->Inserir($recepcionista)))
+  if(($testando->Inserir($testando)) && ($recepcionista->Inserir($recepcionista))) {
+      var_dump($testando);
       echo "Cadastrou";
+  }
   else
       echo "Não cadastrou";
   

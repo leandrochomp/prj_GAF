@@ -56,7 +56,7 @@
 					  
 					  	<button type="submit" class="btn btn-success" name="btnSalvar" id="btnSalvar"> <i class="fa fa-check-circle"></i> </button> 
 					  	&nbsp
-					  	<button type="button" class="btn btn-danger" name="btnCancelar" id="btnCancelar"><i class="fa fa-trash-o"></i> </button>
+					  	<button type="button" class="btn btn-warning" name="btnCancelar" id="btnCancelar"><i class="fa fa-eraser"></i> </button>
 					  	</p>
 					  	<span id="msg"> </span>
 					</form>

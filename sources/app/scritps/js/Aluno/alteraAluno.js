@@ -59,7 +59,7 @@ $(document).ready( function () {
 			success : function (responseText) {
 				document.getElementById('msg').style.color="red";
 				document.getElementById('msg').innerHTML = responseText;
-                window.location.href = '../../../GAF/View/Recepcionista/listarAluno.php'
+                // window.location.href = '../../../GAF/View/Recepcionista/listarAluno.php'
 				//LIMPA O FORM INTEIRO APÓS O CADASTRO
 				$('#FormCadAluno').trigger("reset");
 			}

@@ -65,7 +65,7 @@
 					  <br>
 					  <button type="submit" class="btn btn-success"> <i class="fa fa-check-circle"></i> </button> 
 					  	&nbsp
-					  	<button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i> 
+					  	<button type="button" class="btn btn-warning"><i class="fa fa-eraser"></i> 
 					</form>
 				</div>
 			</div>

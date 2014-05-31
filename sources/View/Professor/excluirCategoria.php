@@ -1,9 +1,7 @@
 <?php 
 	session_start();
-	//carregando o combo
-    require_once '../../model/atividade.class.php'; 
-	require_once '../../model/pessoa.class.php';
 	
+	require_once '../../model/pessoa.class.php';
 	// INICIO - VERIFICAR SE ESTÁ LOGADO
 	// Para não precisar colocar o código em todas as telas, seria bom deixa-lo junto com o layout em um include.
 	$logado = new pessoa();
@@ -16,11 +14,15 @@
 		echo "<script> window.location.href = '../../index.php'; </script>";
 	}
 	// FIM - VERIFICAR SE ESTÁ LOGADO
-
-    $atividade = new atividade();
-    $atividade->conecta();
  ?>
 
+<?php 
+	require_once ('../../model/categoria.class.php');
+	$codigo = $_GET['cod'];
+	$categoria = new categoria();
+	$categoria->conecta();
+	categoria::PreencheCategoria($codigo);
+?>
 <!DOCTYPE html>
 <html>
 <meta charset="UTF-8"/>
@@ -52,33 +54,24 @@
 			</div>
 			<div class="col-md-8">
 				<div class="panel content">
-				<STRONG> CADASTRAR TREINO ALUNO</STRONG>
+				<STRONG> EDITAR CATEGORIA </STRONG>
 				<hr/>
-					<form id="FormCadTreino" name="FormCadTreino" method="post" action="../../controller/treino_aluno.repositorio.php">
-					  <?php
-					    		$cmd = 'select * from treino;';
-								$sql = mysql_query($cmd) or die(mysql_error());
-								if(mysql_num_rows($sql) > 0){
-									while ($row = mysql_fetch_array($sql)){
-									echo '<p class="cmbTreino"><input type="checkbox" name="treino[]" value="'.$row[0].'">'.$row[1].'</p>';
-								}	
-							}
-					    ?>
-					  	<br class="clear" />
+					<form id="FormEditCat" name="FormEditCat" method="post" action="../../controller/exclui.categoria.repositorio.php?cod=<?php echo $_GET['cod']?>">
+					  <p>
+					    <label for="serie">Grupo Muscular:</label>
+					    <input class="form-control grupoMusc" type="text" name="txtGrupo" id="txtGrupo" value="<?php echo $nome;?>" readonly/>
+					  
+					  	<button type="submit" class="btn btn-success" name="btnSalvar" id="btnSalvar"> <i class="fa fa-check-circle"></i> </button> 
+					  	&nbsp
+					  	<button type="button" class="btn btn-warning" name="btnCancelar" id="btnCancelar"><i class="fa fa-eraser"></i> </button>
+					  	</p>
 					  	<span id="msg"> </span>
-						<div>
-						  	<button type="submit" class="btn btn-success"> <i class="fa fa-check-circle"></i> </button> 
-						  	<button type="button" class="btn btn-warning" id="btnCancelar" name="btnCancelar"><i class="fa fa-eraser"></i> </button>
-					  	</div>
 					</form>
 				</div>
 			</div>
 		</div>
 	</div>
-
     <script type="text/javascript" src="../../app/scritps/LIB/jquery-1.11.0.js "></script>
     <script type="text/javascript" src="../../app/scritps/LIB/bootstrap.js"></script>
-    <script src="../../app/scritps/js/Professor/treino.js"> </script>
-
 </body>
 </html>

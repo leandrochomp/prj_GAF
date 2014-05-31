@@ -51,12 +51,12 @@
 			</div>
 			<div class="col-md-8">
 				<div class="panel content">
-				<STRONG> EDITAR ALUNO </STRONG>
+				<STRONG> EXCLUIR ALUNO </STRONG>
 				<hr/>
-					<form id="FormCadAluno" name="FormCadAluno" method="post" action="../../controller/editar.aluno.repositorio.php?cod=<?php echo $_GET['cod']?>">
+					<form id="FormCadAluno" name="FormCadAluno" method="post" action="../../controller/desativa.aluno.repositorio.php?cod=<?php echo $_GET['cod']?>">
 			          <p>
 					    <label for="nome">Nome Completo:</label>
-					    <input class="form-control bigInblock" type="text" name="txtNome" id="txtNome" title="Digite seu nome" value="<?php echo $nome;?>"/>
+					    <input class="form-control bigInblock" type="text" name="txtNome" id="txtNome" title="Digite seu nome" value="<?php echo $nome;?>" readonly/>
 					  </p>
 					  <p>
 					  	<label for="data">Matricula:</label>
@@ -64,34 +64,34 @@
 					  </p>
 					  <p>
 					    <label for="cpf">CPF:</label>
-					    <input class="form-control cpf" type="text" name="txtCPF" id="txtCPF" title="Digite seu CPF" value="<?php echo $CPF;?>"/>
+					    <input class="form-control cpf" type="text" name="txtCPF" id="txtCPF" title="Digite seu CPF" value="<?php echo $CPF;?>" readonly/>
 
 					    <label for="sexo">Sexo:</label>
-					    <select class="form-control sexoInblock" name="sltSexo" id="sltSexo">
+					    <select class="form-control sexoInblock" name="sltSexo" id="sltSexo" readonly>
 					      <option>Femino</option>
 					      <option>Masculino</option>
 					    </select>
 					  </p>
 					  <p>
 					  	<label for="data">Data Nascimento:</label>
-					    <input class="form-control dtNasc" type="date" name="dtNasc" id="dtNasc" value="<?php echo $dtNasc;?>"/>
+					    <input class="form-control dtNasc" type="date" name="dtNasc" id="dtNasc" value="<?php echo $dtNasc;?>"readonly/>
 					  </p>
 					  <p>
 					    <label for="email">Email:</label>
-					    <input class="form-control email" type="text" name="txtEmail" id="txtEmail" title="digite seu email" value="<?php echo $email;?>"/>
+					    <input class="form-control email" type="text" name="txtEmail" id="txtEmail" title="digite seu email" value="<?php echo $email;?>"readonly/>
 					  </p>
 					  <p>
 					    <label for="tel">Telefone Fixo:</label>
-					    <input class="form-control telFixo" type="text" name="txtFone" id="txtFone" value="<?php echo $telefone;?>"/>
+					    <input class="form-control telFixo" type="text" name="txtFone" id="txtFone" value="<?php echo $telefone;?>"readonly/>
 					  </p>
 					  <p>
 					  	<label for="cel"> Telefone Celular:</label>
-					    <input class="form-control telCel" type="text" name="txtCel" id="txtCel" value="<?php echo $cel;?>"/>
+					    <input class="form-control telCel" type="text" name="txtCel" id="txtCel" value="<?php echo $cel;?>"readonly/>
 					  </p>
 					  <hr>
 					  <p> 
 					  	<label for="cel"> Login:</label>
-					    <input class="form-control login" type="text" name="txtLogin" id="txtLogin" value="<?php echo $login;?>" />
+					    <input class="form-control login" type="text" name="txtLogin" id="txtLogin" value="<?php echo $login;?>" readonly/>
 					  </p>
 					  <p>
 
@@ -99,34 +99,32 @@
 					  <hr>
 					  <p> 
 					  	<label for="cel"> Peso:</label>
-					    <input class="form-control peso" type="text" name="txtPeso" id="txtPeso" value="<?php echo $peso;?>"/>
+					    <input class="form-control peso" type="text" name="txtPeso" id="txtPeso" value="<?php echo $peso;?>"readonly/>
 
 					    <label for="cel"> Altura:</label>
-					    <input class="form-control altura" type="text" name="txtAltura" id="txtAltura" value="<?php echo $alt;?>"/>
+					    <input class="form-control altura" type="text" name="txtAltura" id="txtAltura" value="<?php echo $alt;?>"readonly/>
 
 					    <label for="cel"> Peito:</label>
-					    <input class="form-control peito" type="text" name="txtPeito" id="txtPeito" value="<?php echo $peito;?>"/>
+					    <input class="form-control peito" type="text" name="txtPeito" id="txtPeito" value="<?php echo $peito;?>"readonly/>
 				     </p>
 				     <p> 
 					    <label for="cel"> Cintura:</label>
-					    <input class="form-control cintura" type="text" name="txtCintura" id="txtCintura" value="<?php echo $cintura;?>"/>
+					    <input class="form-control cintura" type="text" name="txtCintura" id="txtCintura" value="<?php echo $cintura;?>"readonly/>
 
 					    <label for="cel"> Quadril:</label>
-					    <input class="form-control quadril" type="text" name="txtQuadril" id="txtQuadril" value="<?php echo $quadril;?>"/>
+					    <input class="form-control quadril" type="text" name="txtQuadril" id="txtQuadril" value="<?php echo $quadril;?>"readonly/>
 
 					    <label for="cel"> Braço:</label>
-					    <input class="form-control braco" type="text" name="txtBraco" id="txtBraco" value="<?php echo $braco;?>"/>
+					    <input class="form-control braco" type="text" name="txtBraco" id="txtBraco" value="<?php echo $braco;?>"readonly/>
 				     </p>
 
 				     <p> 
 					  	<label for="cel"> Coxa:</label>
-					    <input class="form-control coxa" type="text" name="txtCoxa" id="txtCoxa" value="<?php echo $coxa;?>"/>
+					    <input class="form-control coxa" type="text" name="txtCoxa" id="txtCoxa" value="<?php echo $coxa;?>"readonly/>
 				     </p>
 					<span id="msg"></span>
 					  <br>
-					    <button type="submit" class="btn btn-success" name="btnSalvar" id="btnSalvar"> <i class="fa fa-check-circle"></i> </button> 
-					  	&nbsp &nbsp
-					  	<button type="button" class="btn btn-warning" id="btnCancelar" name="btnCancelar"><i class="fa fa-eraser"></i> </button>
+					    <button type="submit" class="btn btn-danger" name="btnSalvar" id="btnSalvar"> <i class="fa fa-trash-o"></i> </button> 
 					</form>
 				</div>
 			</div>

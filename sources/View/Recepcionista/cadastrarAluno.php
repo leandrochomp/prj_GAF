@@ -37,10 +37,9 @@
 		<div class="row">
 			<div class="col-md-4">
 				<ul class="nav nav-pills nav-stacked menu font-24-bold">
-					<li><a href="cadastrarAluno.php">Cadastrar Aluno</a></li>
-					<li><a href="listarAluno.php">Listar Alunos</a></li>
+					<li><a href="listarAluno.php">Listar Alunos</a></li>					
 					<li><a href="alterarSenha.php">Alterar senha</a></li>
-					<li><a href="#">Sair</a></li>
+					<li><a href="../../index.php">Sair</a></li>
 				</ul>
 			</div>
 			<div class="col-md-8">
@@ -116,7 +115,7 @@
 					  <br>
 					    <button type="submit" class="btn btn-success" name="btnSalvar"> <i class="fa fa-check-circle"></i> </button> 
 					  	&nbsp &nbsp
-					  	<button type="button" class="btn btn-danger" name="btnCancel"><i class="fa fa-trash-o"></i> </button>
+					  	<button type="button" class="btn btn-warning" name="btnCancel" id="btnCancel"><i class="fa fa-eraser"></i> </button>
 					</form>
 
 <!-- 					<form class="form-horizontal" role="form">
@@ -162,6 +161,7 @@
 
 	<script type="text/javascript" src="../../app/scritps/LIB/jquery-1.11.0.js "></script>
     <script type="text/javascript" src="../../app/scritps/LIB/bootstrap.js"></script>
-    <script src="../../app/scripts/js/Aluno/alteraAluno.js"></script>
+    <script src="../../app/scritps/js/Aluno/alteraAluno.js"></script>
+
 </body>
 </html>

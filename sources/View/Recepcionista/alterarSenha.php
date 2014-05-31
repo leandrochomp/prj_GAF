@@ -37,10 +37,9 @@
 		<div class="row">
 			<div class="col-md-4">
 				<ul class="nav nav-pills nav-stacked menu font-24-bold">
-					<li><a href="cadastrarAluno.php">Cadastrar Aluno</a></li>
 					<li><a href="listarAluno.php">Listar Alunos</a></li>					
 					<li><a href="alterarSenha.php">Alterar senha</a></li>
-					<li><a href="#">Sair</a></li>
+					<li><a href="../../index.php">Sair</a></li>
 				</ul>
 			</div>
 			<div class="col-md-8">
@@ -63,7 +62,7 @@
 					  <br>
 					    <button type="submit" class="btn btn-success" name="btnSalvar" id="btnSalvar"> <i class="fa fa-check-circle"></i> </button> 
 					  	&nbsp &nbsp
-					  	<button type="button" class="btn btn-danger" name="btnCancel" id="btnCancel"><i class="fa fa-trash-o"></i> </button>
+					  	<button type="button" class="btn btn-warning" id="btnCancelar" name="btnCancelar"><i class="fa fa-eraser"></i> </button>
 					</form>
 				</div>
 			</div>

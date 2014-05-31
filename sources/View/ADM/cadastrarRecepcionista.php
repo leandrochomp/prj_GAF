@@ -24,6 +24,7 @@
     <link href="../../app/styles/bootstrap.css" rel="stylesheet">
     <link href="../../app/styles/style.css" rel="stylesheet">
     <link rel="stylesheet" href="../../app/styles/font-awesome.min.css">
+    <link rel="stylesheet" href="../../app/styles/jquery-ui-1.10.4.min.css">
 </head>
 
 <body>
@@ -64,7 +65,7 @@
 					  </p>
 					  <p>
 					  	<label for="data">Data Nascimento:</label>
-					    <input class="form-control dtNasc" type="date" name="dtNasc" id="dtNasc" />
+					    <input class="form-control dtNasc" type="text" name="dtNasc" id="dtNasc" />
 					  </p>
 					  <p>
 					    <label for="email">Email:</label>
@@ -88,7 +89,7 @@
 					  <div>
 					    <button type="submit" class="btn btn-success" name="btnSalvar"> <i class="fa fa-check-circle"></i> </button> 
 					  	&nbsp &nbsp
-					  	<button type="button" class="btn btn-danger" name="btnCancel" id="btnCancel"><i class="fa fa-trash-o"></i> </button>
+					  	<button type="button" class="btn btn-warning" id="btnCancelar" name="btnCancelar"><i class="fa fa-eraser"></i> </button>
 					  </div>
 					</form>
 				</div>
@@ -99,5 +100,7 @@
     <script type="text/javascript" src="../../app/scritps/LIB/bootstrap.js"></script>
     <script type="text/javascript" src="../../app/scritps/LIB/jquery.maskedinput.js"></script>
     <script src="../../app/scritps/js/Recepcionista/recepcionista.js"> </script>
+    <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="../../app/scritps/LIB/jquery.datepicker.js"></script>
 </body>
 </html>

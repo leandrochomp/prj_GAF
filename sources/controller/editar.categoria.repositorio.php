@@ -7,21 +7,25 @@ $codigo = $_GET['cod'];
 			'idCategoria' => $codigo,
         	));
 
-// $sql = "select idCategoria from Categoria where idCategoria = ".$codigo.";";
-// $sql2 = mysql_query($sql);
-// $cmd = mysql_fetch_array($sql2);
-// $codA = $cmd[0];
+$sql = "select idCategoria from Categoria where idCategoria = ".$codigo.";";
+$sql2 = mysql_query($sql);
+$cmd = mysql_fetch_array($sql2);
+$codA = $cmd[0];
 
-$testando->valorPk = $codigo;
+//$testando->valorPk = $codigo;
 // $testando->Atualizar($testando);
 
-//$aluno->valorPk = $codA;
+$codigo->valorPk = $codA;
+
+var_dump($codigo);
 // $aluno->Atualizar($aluno);
 
 //var_dump($categoria);
 
-  	if ($categoria->Atualizar($codigo))
+  	if ($categoria->Atualizar($codigo)) {
+  		var_dump($categoria);
 	 	echo "Alterou";
+	 }
 	else 
         echo "Não alterou";  
 ?>

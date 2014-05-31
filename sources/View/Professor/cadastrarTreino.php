@@ -75,7 +75,7 @@
 					  	<span id="msg"> </span>
 						<div>
 						  	<button type="submit" class="btn btn-success"> <i class="fa fa-check-circle"></i> </button> 
-						  	<button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i> </button>
+						  	<button type="button" class="btn btn-warning" id="btnCancelar" name="btnCancelar"><i class="fa fa-eraser"></i> </button>
 					  	</div>
 					</form>
 				</div>
