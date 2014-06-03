@@ -60,7 +60,7 @@
 					<form id="FormCadTreino" name="FormCadTreino" method="post" action="../../controller/treino.repositorio.php">
 					  <p>
 					    <label for="serie">Nome Treino:</label>
-					    <input class="form-control bigInblock" type="text" name="txtTreino" id="txtTreino" />
+					    <input class="form-control bigInblock" type="text" name="txtTreino" id="txtTreino" required='required' title="Insira um nome para o treino" />
 					  </p>
 					  <?php
 					    		$cmd = 'select * from atividade order by idCategoria asc;';

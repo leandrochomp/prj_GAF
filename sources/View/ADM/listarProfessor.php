@@ -19,10 +19,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset='UTF-8'/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../../app/styles/bootstrap.css" rel="stylesheet">
     <link href="../../app/styles/style.css" rel="stylesheet">
     <link href="../../app/styles/table.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../app/styles/font-awesome.min.css">
 </head>
 	<div class="container">
 		<div class="row header">
@@ -34,7 +36,7 @@
 		<div class="row">
 			<div class="col-md-4">
 				<ul class="nav nav-pills nav-stacked menu font-24-bold">
-					<li><a href="listarRecepcionista.php">Recepção</a></li>
+					<li><a href="listarRecepcionista.php">Recepcionista</a></li>
 					<li><a href="listarProfessor.php">Professor</a></li>
 					<li><a href="listarAluno.php">Listar Alunos</a></li>
 					<li><a href="../../index.php">Sair</a></li>
@@ -42,7 +44,10 @@
 			</div>
 			<div class="col-md-8">
 				<div class="panel content">
-				<STRONG> LISTA DE PROFESSOR </STRONG>
+				<STRONG> LISTAR PROFESSORES <a href="cadastrarProfessor.php">
+						<button class="buttonsRight" type="button"><i class=" fa fa-plus"></i>  </button>
+					</a>
+				</STRONG>
 				<hr/>
 				<?php
 					require_once('../../model/professor.class.php');

@@ -45,12 +45,12 @@
 
 $(document).ready( function () {
     //$("#txtCPF").mask("999.999.999-99"); //mascarando para cpf
-      // $("#dtNasc").datepicker();
+       // $("#dtNasc").datepicker();
       // dateFormat : 'yy-mm-dd'
 
-      $('#dtNasc').datepicker({
-    		dateFormat : 'yy-mm-dd'
-	  });
+   //    $('#dtNasc').datepicker({
+   //  		dateFormat : 'yy-mm-dd'
+	  // });
 	  $("#dtNasc").mask("99/99/9999"); //mascarando para data
     
 

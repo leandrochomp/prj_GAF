@@ -37,7 +37,7 @@
 		<div class="row">
 			<div class="col-md-4">
 				<ul class="nav nav-pills nav-stacked menu font-24-bold">
-					<li><a href="listarRecepcionista.php">Recepção</a></li>
+					<li><a href="listarRecepcionista.php">Recepcionista</a></li>
 					<li><a href="listarProfessor.php">Professor</a></li>
 					<li><a href="listarAluno.php">Listar Alunos</a></li>
 					<li><a href="../../index.php">Sair</a></li>
@@ -57,17 +57,17 @@
 					    <input class="form-control cpf" type="text" name="txtCPF" id="txtCPF" maxlength="11" onblur="return verificarCPF(this.value)" required='required'/>
 
 					    <label for="sexo">Sexo:</label>
-					    <select class="form-control sexoInblock" name="sltSexo" id="sltSexo">
+					    <select class="form-control sexoInblock" name="sltSexo" id="sltSexo"/>
 					      <option>Femino</option>
 					      <option>Masculino</option>
 					    </select>
 					  </p>
 					  <p>
 					  	<label for="data">Data Nascimento:</label>
-					    <input class="form-control dtNasc" type="date" name="dtNasc" id="dtNasc" />
+					    <input class="form-control dtNasc" type="date" name="dtNasc" id="dtNasc" required='required'/>
 					  
 					  	<label for="sexo">Nivel:</label>
-					    <select class="form-control nivel" name="sltNivel" id="sltNivel">
+					    <select class="form-control nivel" name="sltNivel" id="sltNivel"/>
 					      <option>Professor</option>
 					      <option>Coordenador</option>
 					    </select>
@@ -78,11 +78,11 @@
 					  </p>
 					  <p>
 					    <label for="tel">Telefone Fixo:</label>
-					    <input class="form-control telFixo" type="text" name="txtFone" id="txtFone"/>
+					    <input class="form-control telFixo" type="text" name="txtFone" id="txtFone" maxlength="13" />
 					  </p>
 					  <p>
 					  	<label for="cel"> Telefone Celular:</label>
-					    <input class="form-control telCel" type="text" name="txtCel" id="txtCel" />
+					    <input class="form-control telCel" type="text" name="txtCel" id="txtCel" maxlength="13"/>
 					  </p>
 					  <hr>
 					  <p> 

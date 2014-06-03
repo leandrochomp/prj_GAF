@@ -59,8 +59,6 @@
 								<td class="buttons">
 									<div class="button">
 										<a href="editarAtividade.php?cod='.$info_atividade[0].'"class="glyphicon glyphicon-pencil" title="editar"></a>
-										<a href="cadastrarAtividade.php"class="glyphicon glyphicon-plus-sign" title="adicionar"></a>
-										<a href="excluirAtividade.php?cod='.$info_atividade[0].'" class="glyphicon glyphicon-trash" title="excluir"></a>
 									</div>
 								</td>				
 							</tr>
@@ -86,8 +84,6 @@
 				<li>
 					<div class="button">
 						<a href="editarAtividade.php?cod='.$info_atividade[0].'"class="glyphicon glyphicon-pencil" title="editar"></a>
-						<a href="cadastrarAtividade.php"class="glyphicon glyphicon-plus-sign" title="adicionar"></a>
-						<a href="excluirAtividade.php?cod='.$info_atividade[0].'" class="glyphicon glyphicon-trash" title="excluir"></a>
 					</div>
 				</li>
 			</ul>';
@@ -121,6 +117,16 @@
 			}
 				
 		}// end function PreencheAtividade
-
+			public function AtualizarAtividade($idAtividade,$novoNome,$serie,$carga,$repeticao,$tempo){
+		$sql ="update atividade set nome = '".$novoNome."' ,serie = '".$serie."' ,carga = '".$carga."' ,repeticao = '".$repeticao."' ,tempo = '".$tempo."' where idAtividade = ".$idAtividade.";";
+		echo $sql;
+		try{
+			$cmd = mysql_query($sql)or die(mysql_error());
+			//esta um echo por que no return não dá nada. Hue
+			echo  'Atividade alterada com sucesso!!';
+		}catch (Exception $e) {
+			echo "Não foi possível alterar categoria : ",  $e->getMessage(), "\n";
+		}
+	}//end AtualizarAtividade
 	}//end class Pessoa
 ?>

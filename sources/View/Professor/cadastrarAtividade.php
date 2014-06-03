@@ -82,7 +82,7 @@
 					    <input class="form-control repeticao" type="text" name="txtRep" id="txtRep" required="required"/>
 					    
 					    <label for="tempo">Tempo:</label>
-					    <input class="form-control tempo" type="text" name="txtTempo" id="txtTempo" required="required"/>
+					    <input class="form-control tempo" type="text" name="txtTempo" id="txtTempo"/>
 					  </p>
 					  <br>
 					  	<button type="submit" class="btn btn-success" id="btnSalvar"> <i class="fa fa-check-circle"></i> </button> 

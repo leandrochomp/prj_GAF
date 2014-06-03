@@ -287,7 +287,6 @@ abstract class banco{
 									<td class="buttons">
 										<div class="button">
 											<a href="editarAluno.php?cod='.$info_pessoa[0].'"class="glyphicon glyphicon-pencil" title="editar"></a>
-											<a href="cadastrarAluno.php"class="glyphicon glyphicon-plus-sign" title="adicionar"></a>
 											<a href="desativar.php?cod='.$info_pessoa[0].'" class="glyphicon glyphicon-trash" title="desativar"></a>		
 										</div>
 									</td>				
@@ -310,7 +309,7 @@ abstract class banco{
 					<li>
 						<div class="button">
 							<a href="editarAluno.php?cod='.$info_pessoa[0].'"class="glyphicon glyphicon-pencil" title="editar"></a>
-							<a href="relatorio.php?cod='.$info_pessoa[0].'" class="glyphicon glyphicon-stats" title="relatorio"></a>
+							<a href="desativar.php?cod='.$info_pessoa[0].'" class="glyphicon glyphicon-trash" title="desativar"></a>
 
 						</div>
 					</li>
@@ -357,7 +356,6 @@ abstract class banco{
 									<td class="buttons">
 										<div class="button">
 											<a href="cadastrarTreinoAluno.php?cod='.$info_pessoa[0].'"class="glyphicon glyphicon-dashboard" title="cadastrar treino"></a>
-											<a href="relatorio.php?cod='.$info_pessoa[0].'" class="glyphicon glyphicon-stats" title="relatorio"></a>	
 										</div>
 									</td>				
 								</tr>
@@ -379,7 +377,6 @@ abstract class banco{
 					<li>
 						<div class="button">
 							<a href="cadastrarTreinoAluno.php?cod='.$info_pessoa[0].'"class="glyphicon glyphicon-dashboard" title="cadastrar treino"></a>
-							<a href="relatorio.php?cod='.$info_pessoa[0].'" class="glyphicon glyphicon-stats" title="relatorio"></a>	
 						</div>
 					</li>
 				</ul>';
@@ -423,7 +420,6 @@ abstract class banco{
 								<td class="buttons">
 									<div class="button">
 										<a href="editarProfessor.php?cod='.$info_pessoa[0].'"class="glyphicon glyphicon-pencil" title="editar"></a>
-										<a href="cadastrarProfessor.php"class="glyphicon glyphicon-plus-sign" title="adicionar"></a>
 										<a href="desativar.php?cod='.$info_pessoa[0].'" class="glyphicon glyphicon-trash" title="desativar"></a>	
 									</div>
 								</td>				
@@ -446,7 +442,6 @@ abstract class banco{
 				<li>
 					<div class="button">
 						<a href="editarProfessor.php?cod='.$info_pessoa[0].'" class="glyphicon glyphicon-pencil" title="editar"></a>
-						<a href="cadastrarProfessor.php"class="glyphicon glyphicon-plus-sign" title="adicionar"></a>
 						<a href="desativar.php?cod='.$info_pessoa[0].'" class="glyphicon glyphicon-trash" title="desativar"></a>					
 					</div>
 				</li>
@@ -490,7 +485,6 @@ abstract class banco{
 								<td class="buttons">
 									<div class="button">
 										<a href="editarRecepcionista.php?cod='.$info_pessoa[0].'"class="glyphicon glyphicon-pencil" title="editar"></a>
-										<a href="cadastrarRecepcionista.php"class="glyphicon glyphicon-plus-sign" title="adicionar"></a>
 										<a href="desativar.php?cod='.$info_pessoa[0].'" class="glyphicon glyphicon-trash" title="desativar"></a>
 									</div>
 								</td>				
@@ -513,7 +507,6 @@ abstract class banco{
 				<li>
 					<div class="button">
 						<a href="editarRecepcionista.php?cod='.$info_pessoa[0].'" class="glyphicon glyphicon-pencil" title="editar"></a>
-						<a href="cadastrarRecepcionista.php"class="glyphicon glyphicon-plus-sign" title="adicionar"></a>
 						<a href="desativar.php?cod='.$info_pessoa[0].'" class="glyphicon glyphicon-trash" title="desativar"></a>
 					</div>
 				</li>

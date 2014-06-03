@@ -45,7 +45,10 @@
 			</div>
 			<div class="col-md-8">
 				<div class="panel content">
-				<STRONG> LISTAR TREINO </STRONG>
+				<STRONG> LISTAR TREINO <a href="cadastrarTreino.php">
+						<button class="buttonsRight" type="button"><i class=" fa fa-plus"></i>  </button>
+					</a>
+				</STRONG>
 				<hr>
 				<?php
 					require_once('../../model/treino.class.php');

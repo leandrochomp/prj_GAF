@@ -53,7 +53,7 @@
 					  </p>
 					  <p>
 					    <label for="cpf">CPF:</label>
-					    <input class="form-control cpf" type="text" name="txtCPF" id="txtCPF" title="Digite seu CPF" />
+					    <input class="form-control cpf" type="text" name="txtCPF" id="txtCPF" maxlength="11" onblur="return verificarCPF(this.value)" required='required'/>
 
 					    <label for="sexo">Sexo:</label>
 					    <select class="form-control sexoInblock" name="sltSexo" id="sltSexo">
@@ -63,19 +63,19 @@
 					  </p>
 					  <p>
 					  	<label for="data">Data Nascimento:</label>
-					    <input class="form-control dtNasc" type="date" name="dtNasc" id="dtNasc" title="insira sua data de nascimento" />
+					    <input class="form-control dtNasc" type="date" name="dtNasc" id="dtNasc" title="insira sua data de nascimento" required='required'/>
 					  </p>
 					  <p>
 					    <label for="email">Email:</label>
-					    <input class="form-control email" type="text" name="txtEmail" id="txtEmail" title="digite seu email" />
+					    <input class="form-control email" type="email" name="txtEmail" id="txtEmail" title="digite seu email" />
 					  </p>
 					  <p>
 					    <label for="tel">Telefone Fixo:</label>
-					    <input class="form-control telFixo" type="text" name="txtFone" id="txtFone" title="digite seu telefone" />
+					    <input class="form-control telFixo" type="text" name="txtFone" id="txtFone" title="digite seu telefone" maxlength="13"/>
 					  </p>
 					  <p>
 					  	<label for="cel"> Telefone Celular:</label>
-					    <input class="form-control telCel" type="text" name="txtCel" id="txtCel" title="digite seu celular"/>
+					    <input class="form-control telCel" type="text" name="txtCel" id="txtCel" title="digite seu celular" maxlength="13"/>
 					  </p>
 					  <hr>
 					  <p> 
@@ -88,28 +88,28 @@
 					  <hr>
 					  <p> 
 					  	<label for="cel"> Peso:</label>
-					    <input class="form-control peso" type="text" name="txtPeso" id="txtPeso" />
+					    <input class="form-control peso" type="text" name="txtPeso" id="txtPeso" maxlength="4"/>
 
 					    <label for="cel"> Altura:</label>
-					    <input class="form-control altura" type="text" name="txtAltura" id="txtAltura" />
+					    <input class="form-control altura" type="text" name="txtAltura" id="txtAltura" maxlength="4"/>
 
 					    <label for="cel"> Peito:</label>
-					    <input class="form-control peito" type="text" name="txtPeito" id="txtPeito" />
+					    <input class="form-control peito" type="text" name="txtPeito" id="txtPeito" maxlength="4"/>
 				     </p>
 				     <p> 
 					    <label for="cel"> Cintura:</label>
-					    <input class="form-control cintura" type="text" name="txtCintura" id="txtCintura" />
+					    <input class="form-control cintura" type="text" name="txtCintura" id="txtCintura" maxlength="4"/>
 
 					    <label for="cel"> Quadril:</label>
-					    <input class="form-control quadril" type="text" name="txtQuadril" id="txtQuadril" />
+					    <input class="form-control quadril" type="text" name="txtQuadril" id="txtQuadril" maxlength="4"/>
 
 					    <label for="cel"> Braço:</label>
-					    <input class="form-control braco" type="text" name="txtBraco" id="txtBraco" />
+					    <input class="form-control braco" type="text" name="txtBraco" id="txtBraco" maxlength="4"/>
 				     </p>
 
 				     <p> 
 					  	<label for="cel"> Coxa:</label>
-					    <input class="form-control coxa" type="text" name="txtCoxa" id="txtCoxa" />
+					    <input class="form-control coxa" type="text" name="txtCoxa" id="txtCoxa" maxlength="4" />
 				     </p>
 					 <span id="msg"></span>
 					  <br>
@@ -117,44 +117,6 @@
 					  	&nbsp &nbsp
 					  	<button type="button" class="btn btn-warning" name="btnCancel" id="btnCancel"><i class="fa fa-eraser"></i> </button>
 					</form>
-
-<!-- 					<form class="form-horizontal" role="form">
-
-				  	<div class="form-group">
-					    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-					    <div class="col-sm-4">
-					      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-					    </div>
-					    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
-					    <div class="col-sm-4">
-					      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-					    </div>
-					  </div>
-
-					  <div class="form-group">
-					    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-					    <div class="col-sm-10">
-					      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-					    </div>
-				    </div>
-
-
-
-					  <div class="form-group">
-					    <div class="col-sm-offset-8 col-sm-4">
-					      <div class="checkbox">
-					        <label>
-					          <input type="checkbox"> Remember me
-					        </label>
-					      </div>
-					    </div>
-					  </div>
-					  <div class="form-group">
-					    <div class="col-sm-offset-2 col-sm-10">
-					      <button type="submit" class="btn btn-default">Sign in</button>
-					    </div>
-					  </div>
-					</form> -->
 			</div>
 		</div>
 	</div>

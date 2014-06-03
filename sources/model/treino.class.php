@@ -71,8 +71,6 @@
 								<td class="buttons">
 									<div class="button">
 										<a href="editarTreino.php?cod='.$info_treino[0].'"class="glyphicon glyphicon-pencil" title="editar"></a>
-										<a href="cadastrarTreino.php"class="glyphicon glyphicon-plus-sign" title="adicionar"></a>
-										<a href="excluirTreino.php?cod='.$info_treino[0].'" class="glyphicon glyphicon-trash" title="excluir"></a>
 									</div>
 								</td>				
 							</tr>
@@ -85,8 +83,6 @@
 				</li>
 					<div class="button">
 						<a href="editarTreino.php?cod='.$info_treino[0].'"class="glyphicon glyphicon-pencil" title="editar"></a>
-						<a href="cadastrarTreino.php"class="glyphicon glyphicon-plus-sign" title="adicionar"></a>
-						<a href="excluirTreino.php?cod='.$info_treino[0].'" class="glyphicon glyphicon-trash" title="excluir"></a>
 					</div>
 				</li>
 			</ul>';

@@ -45,7 +45,10 @@
 			</div>
 			<div class="col-md-8">
 				<div class="panel content">
-				<STRONG> LISTAR CATEGORIA </STRONG>
+				<STRONG> LISTAR CATEGORIA <a href="cadastrarCategoria.php">
+						<button class="buttonsRight" type="button"><i class=" fa fa-plus"></i>  </button>
+					</a>
+				</STRONG>
 				<hr>
 				<?php
 					require_once('../../model/categoria.class.php');

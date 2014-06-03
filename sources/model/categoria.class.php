@@ -48,8 +48,6 @@
 									<td class="buttons">
 										<div class="button">
 											<a href="editarCategoria.php?cod='.$info_categoria[0].'"class="glyphicon glyphicon-pencil" title="editar"></a>
-											<a href="cadastrarCategoria.php"class="glyphicon glyphicon-plus-sign" title="adicionar"></a>
-											<a href="excluirCategoria.php?cod='.$info_categoria[0].'" class="glyphicon glyphicon-trash" title="excluir"></a>
 										</div>
 									</td>				
 								</tr>
@@ -63,8 +61,6 @@
 					<li>
 						<div class="button">
 							<a href="editarCategoria.php?cod='.$info_categoria[0].'"class="glyphicon glyphicon-pencil" title="editar"></a>
-							<a href="cadastrarCategoria.php"class="glyphicon glyphicon-plus-sign" title="adicionar"></a>
-							<a href="excluirCategoria.php?cod='.$info_categoria[0].'" class="glyphicon glyphicon-trash" title="excluir"></a>
 						</div>
 					</li>
 				</ul>';
@@ -94,5 +90,20 @@
 			}
 				
 		}// end function PreencheCategoria
+
+		public function AtualizarCategoria($novoNome,$idCategoria){
+		$sql ="update categoria set nome = '".$novoNome."' where idCategoria = ".$idCategoria.";";
+		try{
+			$cmd = mysql_query($sql)or die(mysql_error());
+			//esta um echo por que no return não dá nada. Hue
+			echo  'Categoria alterada com sucesso!!';
+		}catch (Exception $e) {
+			echo "Não foi possível alterar categoria : ",  $e->getMessage(), "\n";
+		}	
+
+	}//fim AtualizarCategoria
+
+
+
 	}//end class Pessoa
 ?>

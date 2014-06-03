@@ -23,6 +23,7 @@
     <link href="../../app/styles/bootstrap.css" rel="stylesheet">
     <link href="../../app/styles/style.css" rel="stylesheet">
     <link href="../../app/styles/table.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../app/styles/font-awesome.min.css">
 </head>
 	<div class="container">
 		<div class="row header">
@@ -44,7 +45,7 @@
 			</div>
 			<div class="col-md-8">
 				<div class="panel content">
-				<STRONG> LISTA DE ALUNOS </STRONG>
+				<STRONG> LISTAR ALUNO </STRONG>
 				<hr/>
 				<?php
 					require_once('../../model/aluno.class.php');

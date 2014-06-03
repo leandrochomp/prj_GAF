@@ -36,7 +36,7 @@
 		<div class="row">
 			<div class="col-md-4">
 				<ul class="nav nav-pills nav-stacked menu font-24-bold">
-					<li><a href="listarRecepcionista.php">Recepção</a></li>
+					<li><a href="listarRecepcionista.php">Recepcionista</a></li>
 					<li><a href="listarProfessor.php">Professor</a></li>
 					<li><a href="listarAluno.php">Listar Alunos</a></li>
 					<li><a href="../../index.php">Sair</a></li>

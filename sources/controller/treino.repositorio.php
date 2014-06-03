@@ -16,13 +16,12 @@ require_once '../model/atividade.class.php';
 
       if(!isset($_POST['treino'])){
         echo 'Não foram definidas atividades para o treino';
+        break;
       } else {
         $tipo = $_POST['treino'];
         
         foreach ($tipo as $key => $value) {
-          // echo 'insert into treino_atividade ';
           mysql_query("INSERT INTO treino_atividade (`idtreino_atv`, `idTREINO`, `idATIVIDADE`) VALUES (null, '".$codigo."', '".$value."')") ;
-
         } 
       }
     

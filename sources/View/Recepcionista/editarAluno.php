@@ -64,7 +64,7 @@
 					  </p>
 					  <p>
 					    <label for="cpf">CPF:</label>
-					    <input class="form-control cpf" type="text" name="txtCPF" id="txtCPF" title="Digite seu CPF" value="<?php echo $CPF;?>"/>
+					    <input class="form-control cpf" type="text" name="txtCPF" id="txtCPF" maxlength="11" onblur="return verificarCPF(this.value)" required='required' title="Digite seu CPF" value="<?php echo $CPF;?>"/>
 
 					    <label for="sexo">Sexo:</label>
 					    <select class="form-control sexoInblock" name="sltSexo" id="sltSexo">
