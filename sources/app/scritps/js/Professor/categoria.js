@@ -20,7 +20,6 @@ $(document).ready( function () {
 	});
 
 	$( "#btnCancelar" ).click(function() {
-		//resetForm($('#FormCadRecp'))
 		$('#FormCadCategoria').trigger("reset");
 	});
 });

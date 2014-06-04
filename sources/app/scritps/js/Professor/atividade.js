@@ -2,11 +2,11 @@
 $(document).ready( function () {
 
 	function verificaNumero(e) {
-                if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
-                	alert('digite apenas números');
-                    return false;
-                }
+        if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+        	alert('digite apenas números');
+            return false;
         }
+    }
 
     $("#txtTempo").keypress(verificaNumero);
     $("#txtRep").keypress(verificaNumero);
@@ -25,7 +25,7 @@ $(document).ready( function () {
 			success : function (responseText) {
 				document.getElementById('msg').style.color="red";
 				document.getElementById('msg').innerHTML = responseText;
-				window.location.href = '../../../GAF/View/Professor/listarAtividade.php'
+				// window.location.href = '../../../GAF/View/Professor/listarAtividade.php'
 				$('#FormCadAtividade').trigger("reset"); 
 			}
 		});

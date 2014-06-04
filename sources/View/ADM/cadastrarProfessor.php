@@ -78,7 +78,7 @@
 					  </p>
 					  <p>
 					    <label for="tel">Telefone Fixo:</label>
-					    <input class="form-control telFixo" type="text" name="txtFone" id="txtFone" maxlength="13" />
+					    <input class="form-control telFixo" type="text" name="txtFone" id="txtFone" maxlength="13" required='required'/>
 					  </p>
 					  <p>
 					  	<label for="cel"> Telefone Celular:</label>
@@ -105,7 +105,7 @@
 	
 	<script type="text/javascript" src="../../app/scritps/LIB/jquery-1.11.0.js"></script>
     <script type="text/javascript" src="../../app/scritps/LIB/bootstrap.js"></script>
-    <script src="../../app/scritps/js/Professor/professor.js"> </script>
+    <script src="../../app/scritps/js/Professor/alteraProf.js"></script>
     <script src="../../app/scritps/LIB/jquery.maskedinput.js"> </script>
 </body>
 </html>

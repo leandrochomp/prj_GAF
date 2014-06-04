@@ -1,4 +1,5 @@
 // JavaScript Document
+//FDP
 function verificarCPF(){
     var i;
     var s = document.getElementById('txtCPF').value;
@@ -44,10 +45,23 @@ function verificarCPF(){
 }
 
 $(document).ready( function () {
-        // $("#txtCPF").mask("999.999.999-99"); //mascarando cpf
+         $("#txtCPF").mask("999.999.999-99"); //mascarando cpf
+         $("#txtFone").mask("9999-9999"); //mascarando numero
+         $("#txtCel").mask("9999-9999?9"); //mascarando numero
+
+        function verificaNumero(e) {
+            if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+                alert('digite apenas números');
+                return false;
+            }
+        }
+
+    $("#txtFone").keypress(verificaNumero);
+    $("#txtCel").keypress(verificaNumero);
+    $("#txtCPF").keypress(verificaNumero);
         
         $('#FormCadProf').submit( function() {
-        var that = this
+        var that = this,
         dados = $(this).serialize();
         if (!verificarCPF()){
             return false;
@@ -60,13 +74,13 @@ $(document).ready( function () {
             success : function (responseText) {
                 document.getElementById('msg').style.color="red";
                 document.getElementById('msg').innerHTML = responseText;
+                // window.location.href = '../../../GAF/View/Recepcionista/listarAluno.php'
                 //LIMPA O FORM INTEIRO APÓS O CADASTRO
                 $('#FormCadProf').trigger("reset");
             }
         });
 
         return false;
-
     });
 
     //isto não esta em uso, mas é uma forma de se limpar o form e uma maneira facil
@@ -76,7 +90,7 @@ $(document).ready( function () {
     };
     
     //limpando o form professor
-    $( "#btnCancel" ).click(function() {
+    $( "#btnCancelar" ).click(function() {
         //resetForm($('#FormCadRecp'))
         $('#FormCadProf').trigger("reset");
     });

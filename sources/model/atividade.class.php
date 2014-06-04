@@ -119,7 +119,7 @@
 		}// end function PreencheAtividade
 			public function AtualizarAtividade($idAtividade,$novoNome,$serie,$carga,$repeticao,$tempo){
 		$sql ="update atividade set nome = '".$novoNome."' ,serie = '".$serie."' ,carga = '".$carga."' ,repeticao = '".$repeticao."' ,tempo = '".$tempo."' where idAtividade = ".$idAtividade.";";
-		echo $sql;
+		//echo $sql;
 		try{
 			$cmd = mysql_query($sql)or die(mysql_error());
 			//esta um echo por que no return não dá nada. Hue

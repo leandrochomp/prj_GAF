@@ -7,28 +7,24 @@ $atividade->conecta();
 //fim gambiarra
 
 
-$idAtividade  = $_GET['cod'];
-$nome    =  $_POST['sltGrupo'];
-$atv     = $_POST['txtAtividade'];
-$serie   = $_POST['txtSerie'];
-$carga   = $_POST['txtCarga'];
+$idAtividade = $_GET['cod'];
+$idCategoria = $_POST['sltGrupo'];
+$atv     	 = $_POST['txtAtividade'];
+$serie       = $_POST['txtSerie'];
+$carga       = $_POST['txtCarga'];
 $repeticao   = $_POST['txtRep'];
-$tempo   = $_POST['txtTempo'];
-//$codA = $cmd[0];
-
-// $codA = $exe[0];
-// $nome = $exe[1];
+$tempo       = $_POST['txtTempo'];
 
 
-        	$atividade = new atividade(array(
-				"idAtividade"  => $idAtividade,
-				"idCategoria"  => $nome,
-				"nome"         => $atv,
-				"serie"        => $serie,
-				"carga"        => $carga,
-				"repeticao"    => $repeticao,
-				"tempo"        => $tempo,
-        	));
+    	$atividade = new atividade(array(
+			"idAtividade"  => $idAtividade,
+			"idCategoria"  => $idCategoria,
+			"atv"          => $atv,
+			"serie"        => $serie,
+			"carga"        => $carga,
+			"repeticao"    => $repeticao,
+			"tempo"        => $tempo,
+    	));
 
-  	$atividade->AtualizarAtividade($idAtividade,$atv,$nome,$serie,$carga,$repeticao,$tempo);
+  	$atividade->AtualizarAtividade($idAtividade,$idCategoria,$atv,$serie,$carga,$repeticao,$tempo);
 ?>

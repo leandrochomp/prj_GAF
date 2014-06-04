@@ -56,10 +56,10 @@
 				<div class="panel content">
 				<STRONG> EDITAR CATEGORIA </STRONG>
 				<hr/>
-					<form id="FormEditCat" name="FormEditCat" method="post" action="../../controller/editar.categoria.repositorio.php?cod=<?php echo $_GET['cod']?>">
+					<form id="FormCadCategoria" name="FormCadCategoria" method="post" action="../../controller/editar.categoria.repositorio.php?cod=<?php echo $_GET['cod']?>">
 					  <p>
 					    <label for="serie">Grupo Muscular:</label>
-					    <input class="form-control grupoMusc" type="text" name="txtGrupo" id="txtGrupo" value="<?php echo $nome;?>"/>
+					    <input class="form-control grupoMusc" type="text" name="txtGrupo" id="txtGrupo" required='required' value="<?php echo $nome;?>"/>
 					  
 					  	<button type="submit" class="btn btn-success" name="btnSalvar" id="btnSalvar"> <i class="fa fa-check-circle"></i> </button> 
 					  	&nbsp
@@ -73,5 +73,6 @@
 	</div>
     <script type="text/javascript" src="../../app/scritps/LIB/jquery-1.11.0.js "></script>
     <script type="text/javascript" src="../../app/scritps/LIB/bootstrap.js"></script>
+    <script src="../../app/scritps/js/Professor/categoria.js"> </script>
 </body>
 </html>

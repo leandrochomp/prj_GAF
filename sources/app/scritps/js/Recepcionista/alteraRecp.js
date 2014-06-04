@@ -44,19 +44,22 @@ function verificarCPF(){
 }
 
 $(document).ready( function () {
-    $("#txtCPF").mask("999.999.999-99"); //mascarando para cpf
+         $("#txtCPF").mask("999.999.999-99"); //mascarando cpf
+         $("#txtFone").mask("9999-9999"); //mascarando numero
+         $("#txtCel").mask("9999-9999?9"); //mascarando numero
 
-    function verificaNumero(e) {
-                if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
-                	alert('digite apenas números');
-                    return false;
-                }
+        function verificaNumero(e) {
+            if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+                alert('digite apenas números');
+                return false;
+            }
         }
 
-        $("#txtFone").keypress(verificaNumero);
-        $("#txtCel").keypress(verificaNumero);
+    $("#txtFone").keypress(verificaNumero);
+    $("#txtCel").keypress(verificaNumero);
+    $("#txtCPF").keypress(verificaNumero);
 
-	$('#FormAlteraRec').submit( function() {
+	$('#FormCadRecp').submit( function() {
 		var that = this,
 		dados = $(this).serialize();
 		if (!verificarCPF()){
@@ -72,7 +75,7 @@ $(document).ready( function () {
 				document.getElementById('msg').innerHTML = responseText;
 				window.location.href = '../../../GAF/View/ADM/listarRecepcionista.php'
 				//LIMPA O FORM INTEIRO APÓS O CADASTRO
-				$('#FormAlteraRec').trigger("reset");
+				$('#FormCadRecp').trigger("reset");
 			}
 		});
 
@@ -86,8 +89,7 @@ $(document).ready( function () {
 	};
 	
 	//limpando o form professor
-	$( "#btnCancel" ).click(function() {
-		//resetForm($('#FormAlteraRec'))
-		$('#FormAlteraRec').trigger("reset");
+	$( "#btnCancelar" ).click(function() {
+		$('#FormCadRecp').trigger("reset");
 	});
 });

@@ -54,10 +54,10 @@
 				<div class="panel content">
 				<STRONG> EDITAR RECEPCIONISTA </STRONG>
 				<hr/>
-					<form id="FormAlteraRec" name="FormAlteraRec" method="post" action="../../controller/editar.recepcionista.repositorio.php?cod=<?php echo $_GET['cod']?>">
+					<form id="FormCadRecp" name="FormCadRecp" method="post" action="../../controller/editar.recepcionista.repositorio.php?cod=<?php echo $_GET['cod']?>">
 			          <p>
 					    <label for="nome">Nome Completo:</label>
-					    <input class="form-control bigInblock" type="text" name="txtNome" id="txtNome" title="Digite seu nome" value="<?php echo $nome;?>"/>
+					    <input class="form-control bigInblock" type="text" name="txtNome" id="txtNome" title="Digite seu nome" required='required' value="<?php echo $nome;?>"/>
 					  </p>
 					  <p>
 					    <label for="cpf">CPF:</label>
@@ -71,25 +71,25 @@
 					  </p>
 					  <p>
 					  	<label for="data">Data Nascimento:</label>
-					    <input class="form-control dtNasc" type="date" name="dtNasc" id="dtNasc" value="<?php echo $dtNasc;?>"/>
+					    <input class="form-control dtNasc" type="date" name="dtNasc" id="dtNasc" required='required' value="<?php echo $dtNasc;?>"/>
 					  </p>
 					  <p>
 					    <label for="email">Email:</label>
-					    <input class="form-control email" type="text" name="txtEmail" id="txtEmail" title="digite seu email" value="<?php echo $email;?>"/>
+					    <input class="form-control email" type="email" name="txtEmail" id="txtEmail" title="digite seu email" value="<?php echo $email;?>"/>
 					  </p>
 					  <p>
 					    <label for="tel">Telefone Fixo:</label>
-					    <input class="form-control telFixo" type="text" name="txtFone" id="txtFone" value="<?php echo $telefone;?>"/>
+					    <input class="form-control telFixo" type="text" name="txtFone" id="txtFone" maxlength="13" required='required' value="<?php echo $telefone;?>"/>
 					  </p>
 					  <p>
 					  	<label for="cel"> Telefone Celular:</label>
-					    <input class="form-control telCel" type="text" name="txtCel" id="txtCel" value="<?php echo $cel;?>"/>
+					    <input class="form-control telCel" type="text" name="txtCel" id="txtCel" maxlength="13" value="<?php echo $cel;?>"/>
 					  </p>
 					  <!-- LOGIN/SENHA -->
 					  <hr>
 					  <p> 
 					  	<label for="cel"> Login:</label>
-					    <input class="form-control login" type="text" name="txtLogin" id="txtLogin" value="<?php echo $login;?>" />
+					    <input class="form-control login" type="text" name="txtLogin" id="txtLogin" required='required' value="<?php echo $login;?>" />
 					  </p>
 					  <p>
 					  <span id="msg"></span>
@@ -106,5 +106,6 @@
     <script type="text/javascript" src="../../app/scritps/LIB/jquery-1.11.0.js "></script>
     <script type="text/javascript" src="../../app/scritps/LIB/bootstrap.js"></script>
     <script src="../../app/scritps/js/Recepcionista/alteraRecp.js"></script>
+    <script src="../../app/scritps/LIB/jquery.maskedinput.js"> </script>
 </body>
 </html>

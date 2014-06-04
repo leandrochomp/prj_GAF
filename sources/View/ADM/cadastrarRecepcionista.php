@@ -69,15 +69,15 @@
 					  </p>
 					  <p>
 					    <label for="email">Email:</label>
-					    <input class="form-control email" type="text" name="txtEmail" id="txtEmail" />
+					    <input class="form-control email" type="email" name="txtEmail" id="txtEmail" />
 					  </p>
 					  <p>
 					    <label for="tel">Telefone Fixo:</label>
-					    <input class="form-control telFixo" type="text" name="txtFone" id="txtFone" />
+					    <input class="form-control telFixo" type="text" name="txtFone" id="txtFone" maxlength="13" required='required' />
 					  </p>
 					  <p>
 					  	<label for="cel"> Telefone Celular:</label>
-					    <input class="form-control telCel" type="text" name="txtCel" id="txtCel" />
+					    <input class="form-control telCel" type="text" name="txtCel" id="txtCel" maxlength="13"/>
 					  </p>
 					  <hr>
 					  <p> 
@@ -99,8 +99,7 @@
     <script type="text/javascript" src="../../app/scritps/LIB/jquery-1.11.0.js"></script>
     <script type="text/javascript" src="../../app/scritps/LIB/bootstrap.js"></script>
     <script type="text/javascript" src="../../app/scritps/LIB/jquery.maskedinput.js"></script>
-    <script src="../../app/scritps/js/Recepcionista/recepcionista.js"> </script>
-    <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-    <script src="../../app/scritps/LIB/jquery.datepicker.js"></script>
+    <script src="../../app/scritps/js/Recepcionista/alteraRecp.js"></script>
+    <script src="../../app/scritps/LIB/jquery.maskedinput.js"> </script>
 </body>
 </html>

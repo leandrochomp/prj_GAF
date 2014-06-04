@@ -57,7 +57,7 @@
 				<div class="panel content">
 				<STRONG> CADASTRAR TREINO </STRONG>
 				<hr/>
-					<form id="FormCadTreino" name="FormCadTreino" method="post" action="../../controller/treino.repositorio.php">
+					<form id="FormCadTreino" name="FormCadTreino" method="get" action="../../controller/treino.repositorio.php">
 					  <p>
 					    <label for="serie">Nome Treino:</label>
 					    <input class="form-control bigInblock" type="text" name="txtTreino" id="txtTreino" required='required' title="Insira um nome para o treino" />

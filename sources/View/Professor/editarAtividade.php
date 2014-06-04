@@ -61,7 +61,7 @@
 				<div class="panel content">
 				<STRONG> CADASTRAR ATIVIDADE </STRONG>
 				<hr/>
-					<form id="FormEditAti" name="FormEditAti" method="post" action="../../controller/editar.atividade.repositorio.php?cod=<?php echo $_GET['cod']?>">
+					<form id="FormCadAtividade" name="FormCadAtividade" method="post" action="../../controller/editar.atividade.repositorio.php?cod=<?php echo $_GET['cod']?>">
 					  <p>
 					  <label for="grupo">Grupo Muscular:</label>
                       <select class="form-control grupoMusc" name="sltGrupo" id="sltGrupo">
